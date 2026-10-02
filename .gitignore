@@ -1,0 +1,11 @@
+.DS_Store
+*.elf
+*.part
+*.rar
+*.7z
+*.ffpfsc
+*.exfat
+.env*
+node_modules/
+.venv/
+.state/
