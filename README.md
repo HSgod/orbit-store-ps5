@@ -10,20 +10,20 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 These screenshots show a local preview of the paired interface with example USB storage. Game pages show **Download to PS5** after pairing.
 
-Discover shows **Latest releases** by verified game release date, then **All games**. Browse lets you search the full **147-game catalogue**, with **48 games per page**. Each game’s details group its source and format options together.
+Discover shows **Latest releases** by verified game release date, then **All games**. This build starts with **147 games**, and catalogue updates can add more. Browse searches every available game and displays **48 games per page**. Each game’s details group its source and format options together.
 
-![Desktop Discover with Latest releases and All games](assets/0.2.0-beta.3/desktop-discover.png)
-![Desktop Browse with search and the expanded catalogue](assets/0.2.0-beta.3/desktop-browse.png)
-![Desktop game details with single-file download options](assets/0.2.0-beta.3/desktop-details.png)
+![Desktop Discover with Latest releases and All games](assets/0.2.0-beta.4/desktop-discover.png)
+![Desktop Browse with search and the expanded catalogue](assets/0.2.0-beta.4/desktop-browse.png)
+![Desktop game details with single-file download options](assets/0.2.0-beta.4/desktop-details.png)
 
 ## Phone
 
 The same paired interface adapts to touch controls. Game artwork continues to load from external URLs. **Pair devices** in the header connects another device; the game-page action is **Download to PS5**.
 
 <p>
-  <img src="assets/0.2.0-beta.3/phone-discover.png" width="250" alt="Phone Discover with both game rows">
-  <img src="assets/0.2.0-beta.3/phone-browse.png" width="250" alt="Phone Browse and search">
-  <img src="assets/0.2.0-beta.3/phone-details.png" width="250" alt="Phone game details and download options">
+  <img src="assets/0.2.0-beta.4/phone-discover.png" width="250" alt="Phone Discover with both game rows">
+  <img src="assets/0.2.0-beta.4/phone-browse.png" width="250" alt="Phone Browse and search">
+  <img src="assets/0.2.0-beta.4/phone-details.png" width="250" alt="Phone game details and download options">
 </p>
 
 ## Built around the console
@@ -32,6 +32,7 @@ The same paired interface adapts to touch controls. Game artwork continues to lo
 - **A focused collection.** One card per game. Open it to choose from its available sources and formats, with download size and version shown for each option.
 - **Sources you select.** Choose Archive.org, Vikingfile, or both, and acknowledge the download-rights and risk notice before continuing.
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
+- **New games without reinstalling.** The catalogue refreshes on startup and every six hours, with a manual refresh in App settings and a saved copy for offline browsing.
 - **Updates in Orbit.** Check for a release, reinstall when needed, and see which version is running or saved for next start.
 - **A queue that remembers.** Pause, resume, retry, and recover interrupted work.
 - **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
@@ -39,17 +40,19 @@ The same paired interface adapts to touch controls. Game artwork continues to lo
 
 ## Beta status
 
-**Orbit Store 0.2.0-beta.3 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.3).
+**Orbit Store 0.2.0-beta.4 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.4).
 
 Local tests cover downloads, pause/resume, recovery, verified update/reinstall and graceful shutdown. Desktop and phone browser checks cover the two Discover rows, search, pagination and game details. Full console transfers, reboot/auto-start and broader firmware compatibility remain unverified in this beta.
 
-The beta contains **147 games**, each with a direct single-file FFPFSC download option. Every included option has matching file metadata, download headers and bounded-range verification evidence; newly imported files receive fresh range checks. These are link-availability checks; full console downloads have not been verified.
+The bundled catalogue contains **147 games**, each with a direct single-file FFPFSC download option. Every included option has matching file metadata, download headers and bounded-range verification evidence; newly imported files receive fresh range checks. These are link-availability checks; full console downloads have not been verified.
+
+Catalogue updates can add games or correct metadata and links without an ELF update. Existing downloads retain their original file details. App features and bug fixes still require an ELF update.
 
 A shared metadata snapshot supplies verified game details and external artwork URLs. Unsourced details stay empty; the Latest releases row uses known PS5 release dates and excludes future releases. All games includes every available title. Cover images load as you browse; large background art loads for the focused game. Artwork loads from external publisher and catalogue URLs. Individual game image assets are not stored in the repository or bundled in Orbit; the images above are screenshots of the interface.
 
 ## Using the beta
 
-Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.3/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.3/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.3) also includes the exact source, dependency sources, and licences.
+Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.4/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.4/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.4) also includes the exact source, dependency sources, and licences.
 
 To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
 
@@ -76,6 +79,8 @@ Keep the PS5 awake while downloading. Closing the storefront leaves downloads ru
 
 **Coming from beta.2 or earlier:** download the new ELF and replace the existing `orbit_store.elf` in Payload Manager. Accept its overwrite/reinstall prompt. Pause downloads, stop only the identifiable Orbit process in Payload Manager’s **Active Processes**, then run the new ELF. If you cannot confidently identify the process, restart the console when convenient, run the jailbreak and launch the new ELF. Keep the Orbit icon and its saved data.
 
+If you manually deleted the Orbit icon, beta.4 recreates it on the next Orbit start. Saved pairing, source choices and downloads remain intact.
+
 Loading an ELF while Orbit is already running saves the replacement for the next start. It does not switch the active session. The notification now explains this; an existing icon is expected and does not need to be removed.
 
 **From beta.3 onward:**
@@ -86,6 +91,12 @@ Loading an ELF while Orbit is already running saves the replacement for the next
 4. Run the saved `orbit_store.elf` from your payload manager and reopen Orbit. Review and resume your downloads.
 
 The panel shows **Running**, **Saved for next start**, and **Latest release** separately. Pairing, source choices and the download queue are preserved. Updates are manual; no release is installed just by opening the panel. If a download or copy fails, Orbit reports the error and leaves the running session open for a retry.
+
+## Refreshing the game catalogue
+
+Open **App settings → Game catalogue → Refresh catalogue**. New games appear while Orbit keeps running; no ELF reinstall or app restart is needed. Automatic checks run on startup and every six hours. A shared cooldown prevents repeated requests, and server rate limits are honoured.
+
+If the PS5 is offline or a feed check fails, Orbit keeps the last valid catalogue. On first use it falls back to its bundled 147 games. Downloading a game still requires internet access. The current source selections remain in effect after every refresh.
 
 ## Controls and formats
 

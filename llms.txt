@@ -8,7 +8,9 @@ Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Full 
 
 Run orbit_store.elf through a payload manager or ELF loader, then open Orbit Store from the PS5 Media tab. Phone and computer controls are available at http://<ps5-ip>:34177/ on the same local network. Pair devices keeps the code visible on the PS5; Show code on PS5 repeats its notification.
 
-Version 0.2.0-beta.3 contains 147 games with single-file FFPFSC options from Archive.org. Discover shows Latest releases by verified PS5 release date, followed by All games. Browse searches all 147 games and displays 48 games per page. Artwork remains external URLs. The README includes three desktop and three phone screenshots.
+Version 0.2.0-beta.4 bundles 147 games with single-file FFPFSC options from Archive.org. Discover shows Latest releases by verified PS5 release date, followed by All games. Browse searches the full current catalogue and displays 48 games per page; catalogue updates can expand beyond the 147 bundled games. Artwork remains external URLs. The README includes three desktop and three phone screenshots.
+
+The game catalogue updates independently of the ELF from the fixed official catalogue.json feed. Orbit checks on startup and every six hours; App settings → Game catalogue → Refresh catalogue checks manually. Valid updates are cached for offline browsing. Existing jobs keep their original download identity. App features still require ELF updates. A manually deleted Orbit icon is recreated on the next start.
 
 App settings includes Update / reinstall. A paired user can check the fixed official release feed, download a checksum-verified ELF, and see running versus saved versions. Stop Orbit to restart preserves the paused queue; the user then starts the saved ELF from their payload manager. Older installations need one manual ELF replacement and Orbit restart to get these controls.
 
