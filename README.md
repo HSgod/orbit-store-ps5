@@ -10,7 +10,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 These screenshots show a local preview of the paired interface with example USB storage. Game pages show **Download to PS5** after pairing.
 
-Discover shows **Latest releases** by verified game release date, then **All games**. Browse supports search and pages of 48 games; details keep each game’s source and format options together.
+Discover shows **Latest releases** by verified game release date, then **All games**. Browse lets you search the full **147-game catalogue**, with **48 games per page**. Each game’s details group its source and format options together.
 
 ![Desktop Discover with Latest releases and All games](assets/0.2.0-beta.3/desktop-discover.png)
 ![Desktop Browse with search and the expanded catalogue](assets/0.2.0-beta.3/desktop-browse.png)
