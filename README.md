@@ -23,17 +23,16 @@ The interface and backend have been built and tested locally, and the main paylo
 
 The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostrunner 2, and Prince of Persia: The Lost Crown. Their direct Archive.org sources pass desktop metadata checks.
 
-The source repository is private. This public repository is the home for documentation, issues, screenshots, and future release downloads. Public binary distribution remains subject to the SDK and dependency licence review.
-
 ## How it will work
 
-Once a tested release is available:
+**The ELF is not available for download yet.** Download instructions and a SHA-256 checksum will be added when the first tested release is published.
 
-1. Download `orbit_store.elf` from this repository's **Releases** page and verify its published SHA-256 checksum.
-2. Start it with your supported PS5 payload loader.
-3. Open Orbit in the console browser, or visit `http://<ps5-ip>:6971/` from a phone or computer on the same network.
-4. Pair remote devices using the console's six-digit code.
-5. Choose a game, choose storage, and select **Download to PS5**.
+The planned console workflow is:
+
+1. Start `orbit_store.elf` with your supported PS5 payload loader.
+2. Open Orbit in the console browser, or visit `http://<ps5-ip>:6971/` from a phone or computer on the same network.
+3. Pair remote devices using the console's six-digit code.
+4. Choose a game, choose storage, and select **Download to PS5**.
 
 Keep the PS5 awake and the payload running. The control browser can close while downloads continue. After a payload restart, interrupted active transfers become paused so you can review and resume them.
 
