@@ -1,4 +1,4 @@
-# Orbit Store
+# Orbit Store — Beta
 
 ### A modern, no-BS download manager for PS5.
 
@@ -16,19 +16,21 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 - **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
 - **No account. No telemetry.** Pair your local device with the code shown on your console.
 
-## Development status
+## Beta status
 
-**This is an early development build. There is no public payload release yet.**
+**Orbit Store 0.2.0-beta.1 is in beta. There is no public payload release yet.**
 
-The interface and backend have been built and tested locally. First-run home-screen icon setup and payload-manager auto-start are integrated into the development payload. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
+Startup, Media-tab icon registration and opening Orbit from that icon were confirmed on a test PS5 on 3 October 2026. Download/resume, reboot/auto-start and broader firmware compatibility still need validation before a public beta release.
 
-The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostrunner 2, and Prince of Persia: The Lost Crown. Their direct Archive.org sources pass desktop metadata checks.
+The beta contains 20 games, including the original five and 15 newer additions. Each included source passes an exact filename/size check, a download-header check and a bounded range request. These are link-availability checks; full console downloads have not been verified. See the [beta catalogue](CATALOGUE.md).
 
-## How it will work
+A shared metadata snapshot supplies game details and external artwork URLs. Cover images load as you browse; large background art loads for the focused game. Artwork is fetched from publishers’ servers and is not uploaded to these repositories or bundled in Orbit.
+
+## Using the beta
 
 **The ELF is not available for download yet.** Download instructions and a SHA-256 checksum will be added when the first tested release is published.
 
-The planned setup and everyday workflow is:
+The setup and everyday workflow is:
 
 1. **Run it once.** Run `orbit_store.elf` through your payload manager or ELF loader. Orbit starts, saves itself on the console, and adds the **Orbit Store** home-screen icon.
 2. **Turn on auto-start.** In Orbit, open **Auto-start** and turn it on for your payload manager: Payload Manager, or an existing `autoload.txt` autoloader. Homebrew Launcher lists Orbit in its menu; etaHEN users add the saved copy in the Toolbox.
@@ -37,7 +39,7 @@ The planned setup and everyday workflow is:
 5. **Download on the console.** Open a game, select its source and format under **Download options**, choose storage, and select **Download to PS5**.
 6. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network and pair using the console's six-digit code.
 
-After a reboot, run your jailbreak as usual and your payload manager starts Orbit. The icon opens the running storefront; it cannot start Orbit by itself. Orbit never creates an `autoload.txt`, because a new one would stop your autoloader from opening Payload Manager. This workflow is awaiting console validation.
+After a reboot, run your jailbreak as usual and your payload manager starts Orbit. The icon opens the running storefront; it cannot start Orbit by itself. Orbit never creates an `autoload.txt`, because a new one would stop your autoloader from opening Payload Manager. The reboot and auto-start workflow is awaiting full console validation.
 
 Keep the PS5 awake while downloading. Closing the storefront leaves downloads running. After an Orbit restart, interrupted transfers become paused so you can review and resume them.
 
@@ -69,7 +71,11 @@ V1 does **not** extract RAR/7z archives, install or launch games, or download in
 
 ## Roadmap
 
-Console validation of first-run icon setup and Payload Manager startup → dependency clearance → first payload release → more verified direct-file sources. Archive extraction, game installation, and additional providers are future work, not advertised as finished features.
+Console download/resume and reboot/auto-start validation → dependency clearance → first public beta payload → more verified direct-file sources. Archive extraction, game installation, and additional providers are future work, not advertised as finished features.
+
+## Licence
+
+Orbit Store is free software under the GNU General Public License, version 3 or later. Every release includes the complete source of that build, the sources of its copyleft components, and third-party notices.
 
 ---
 
