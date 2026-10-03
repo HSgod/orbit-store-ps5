@@ -1,4 +1,4 @@
-# Orbit Store — Beta
+# Orbit Store (Beta)
 
 ### A modern, no-BS download manager for PS5.
 
@@ -22,7 +22,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 Startup, Media-tab icon registration and opening Orbit from that icon were confirmed on a test PS5 on 3 October 2026. Local tests cover downloads, pause/resume and recovery. Full console transfers, reboot/auto-start and broader firmware compatibility remain unverified in this beta.
 
-The beta contains 20 games, including the original five and 15 newer additions. Each included source passes an exact filename/size check, a download-header check and a bounded range request. These are link-availability checks; full console downloads have not been verified. See the [beta catalogue](CATALOGUE.md).
+The beta contains 20 games, including the original five and 15 newer additions. Each included source passes an exact filename/size check, a download-header check and a bounded range request. These are link-availability checks; full console downloads have not been verified.
 
 A shared metadata snapshot supplies game details and external artwork URLs. Cover images load as you browse; large background art loads for the focused game. Artwork is fetched from publishers’ servers and is not uploaded to these repositories or bundled in Orbit.
 
@@ -80,13 +80,13 @@ Orbit Store is free software under the GNU General Public License, version 3 or 
 
 ---
 
-## IMPORTANT — THIRD-PARTY CONTENT & DOWNLOAD DISCLAIMER
+## IMPORTANT: THIRD-PARTY CONTENT & DOWNLOAD DISCLAIMER
 
 **Orbit Store is an independent download-management application. This project does not host, upload, mirror, or bundle the game files referenced by its catalogue.** File transfers happen directly between third-party providers and the user's selected device. This repository hosts Orbit's documentation and, when released, Orbit's own application files.
 
 Catalogue entries reference publicly accessible third-party URLs. **Publicly accessible does not mean authorised, licensed, or free to redistribute.** Use Orbit only for material you have permission to obtain and use, in accordance with applicable law, relevant licences, and the provider's terms. Owning a game does not, by itself, establish permission to obtain any copy found online.
 
-**Third-party files are outside this project's control.** Their hosts and uploaders control availability and contents. Orbit does not guarantee ownership, authenticity, completeness, safety, compatibility, or continued availability. Download completion, a matching file size, or a matching checksum is a technical result—not a licence or a guarantee that the file is safe to run.
+**Third-party files are outside this project's control.** Their hosts and uploaders control availability and contents. Orbit does not guarantee ownership, authenticity, completeness, safety, compatibility, or continued availability. Download completion, a matching file size, or a matching checksum is a technical result, not a licence or a guarantee that the file is safe to run.
 
 All game names, artwork, trademarks, and other third-party materials belong to their respective owners. Orbit is **not affiliated with or endorsed by** Sony Interactive Entertainment, PlayStation, game publishers, or download providers. The app does not supply accounts, credentials, purchase entitlements, or permission to bypass access restrictions.
 
