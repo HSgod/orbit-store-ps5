@@ -42,13 +42,15 @@ Check progress, pause a download or queue another game from your phone. Pair it 
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
 - **New games without reinstalling.** Catalogue additions arrive automatically. Check for more in App settings, or keep browsing your last catalogue while offline.
 - **Updates in Orbit.** Check for a release, reinstall when needed, and see which version is running or saved for next start.
-- **A queue that remembers.** Pause, resume, retry, and recover interrupted work.
+- **A queue you control.** Switch between active, finished and failed downloads, move waiting items up or down, and clear history while keeping downloaded files.
+- **Know what fits.** See free space now, what unfinished downloads still need, and how much will remain afterward.
+- **Find it your way.** Filter by source, format or download size. Sort by title, release date, addition date or size, and save favourites shared with your paired devices.
 - **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
 - **No account. No telemetry.** Pair your local device with the code shown on your console.
 
 ## Beta status
 
-**Orbit Store 0.2.0-beta.4 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.4).
+**Orbit Store 0.2.0-beta.5 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.5).
 
 Startup, icon recovery and offline browsing have been checked on PS5. Automated and desktop/phone checks passed, but online catalogue refresh on PS5, full console downloads, reboot/auto-start and other firmware versions still need testing.
 
@@ -58,7 +60,7 @@ New games and updated links arrive through catalogue updates. You only need an O
 
 ## Using the beta
 
-Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.4/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.4/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.4) also includes the exact source, dependency sources, and licences.
+Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.5/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.5/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.5) also includes the exact source, dependency sources, and licences.
 
 To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
 
@@ -97,6 +99,20 @@ Loading an ELF while Orbit is already running saves the replacement for the next
 4. Run the saved `orbit_store.elf` from your payload manager and reopen Orbit. Review and resume your downloads.
 
 The panel shows **Running**, **Saved for next start**, and **Latest release** separately. Pairing, source choices and the download queue are preserved. Updates are manual; no release is installed just by opening the panel. If a download or copy fails, Orbit reports the error and leaves the running session open for a retry.
+
+## Managing your downloads
+
+Open **Downloads** and choose **Active**, **Finished** or **Failed**. Move waiting downloads up or down to choose what runs next. Paused items keep their place. A retry countdown tells you when Orbit will try an interrupted download again.
+
+**Remove from history** and **Clear finished history** keep downloaded files on your drive. A cancelled download with a kept partial file stays listed so you can resume it. To remove it, reconnect its original drive, choose **Partial file options → Delete partial file**, then remove the history entry.
+
+Before queuing a game, check **Free now**, **Unfinished downloads** and **After queue + this download**. Paused and failed downloads count toward the estimate; cancelled ones do not. Other apps can change free space, so Orbit checks again when a download starts.
+
+## Finding and saving games
+
+In **Browse**, combine source, format and download-size filters, then choose a sort order. Size sorting uses the smallest option matching your filters. **Recently added** shows titles added to Orbit within the last 30 days; **Latest releases** follows game release dates.
+
+Open a game's details and choose **Add to favourites**. Your favourites are shared between the console and paired devices and stay saved after restarting Orbit. Disabling a source hides its games without forgetting your favourites.
 
 ## Refreshing the game catalogue
 
