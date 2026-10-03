@@ -8,7 +8,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 ## Built around the console
 
-- **Direct to PS5.** The console handles the transfer. No Motrix or computer download relay.
+- **Direct to PS5.** Files travel directly from the download provider to your console's selected storage.
 - **A focused collection.** Five curated titles to start, with format and source shown clearly.
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
 - **A queue that remembers.** Pause, resume, retry, and recover interrupted work.
@@ -19,7 +19,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 **This is an early development build. There is no public payload release yet.**
 
-The interface and backend have been built and tested locally, and development payloads cross-compile. The one-time installer and launch-from-tile flow are still in development. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
+The interface and backend have been built and tested locally. First-run home-screen icon setup is integrated into the development payload. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
 
 The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostrunner 2, and Prince of Persia: The Lost Crown. Their direct Archive.org sources pass desktop metadata checks.
 
@@ -29,12 +29,13 @@ The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostr
 
 The planned setup and everyday workflow is:
 
-1. **Set up once.** Download and run `orbit_store.elf` through your supported PS5 payload loader. It installs Orbit locally and adds the **Orbit Store** home-screen tile.
-2. **Open from the home screen.** On later visits, select the Orbit Store tile. It starts Orbit as needed and opens the storefront, without sending the ELF again.
-3. **Download on the console.** Choose a game, choose storage, and select **Download to PS5**.
-4. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:6971/` on the same network and pair using the console's six-digit code.
+1. **Run it once.** Add `orbit_store.elf` to Payload Manager and run it. Orbit starts in the background and adds the **Orbit Store** home-screen icon on its first successful run.
+2. **Start Orbit each session.** Set it to autoload in Payload Manager, or run the same ELF manually whenever needed. The existing icon is retained.
+3. **Open the icon.** Once Orbit is running, select its home-screen icon to open the storefront.
+4. **Download on the console.** Choose a game, choose storage, and select **Download to PS5**.
+5. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network and pair using the console's six-digit code.
 
-This flow requires a supported homebrew environment. After a console reboot, that environment must be active before Orbit can run. The installer, tile, and relaunch behaviour must all pass console testing before release.
+After a reboot, activate your supported homebrew environment and let Payload Manager start Orbit, automatically or manually. The icon opens the running storefront; Payload Manager handles starting the payload. This workflow is awaiting console validation.
 
 Keep the PS5 awake while downloading. Closing the storefront leaves downloads running. After an Orbit restart, interrupted transfers become paused so you can review and resume them.
 
@@ -58,11 +59,13 @@ V1 does **not** extract RAR/7z archives, install or launch games, or download in
 - **Not enough space:** free space on the selected destination before retrying.
 - **Source changed:** preserve the partial file until you decide to remove it and restart. Orbit will not append a different file to it.
 - **Provider throttling:** let the retry delay finish. Orbit respects the provider's `Retry-After` response.
-- **Cannot connect:** check that the payload is running and your device is on the same local network. Do not expose port 6971 to the internet.
+- **Icon does not open Orbit:** start Orbit through Payload Manager, then open the icon again.
+- **Cannot connect:** check that the payload is running and your device is on the same local network. Orbit uses TCP port **34177**.
+- **Port already in use:** Orbit reports the port in its startup error. Check which service is using it before retrying.
 
 ## Roadmap
 
-One-time installation and home-screen relaunch → console validation → dependency clearance → first payload release → more verified direct-file sources. Archive extraction, game installation, and additional providers are future work, not advertised as finished features.
+Console validation of first-run icon setup and Payload Manager startup → dependency clearance → first payload release → more verified direct-file sources. Archive extraction, game installation, and additional providers are future work, not advertised as finished features.
 
 ---
 
