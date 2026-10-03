@@ -2,8 +2,6 @@
 
 ### A modern, no-BS download manager for PS5.
 
-Your console. Your collection. One clear download queue.
-
 Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse on the TV, or manage the same console from your phone. Downloads travel directly from third-party hosts to your PS5 and the drive attached to it.
 
 ![Orbit Store desktop preview](assets/orbit-preview.jpg)
@@ -23,7 +21,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 The interface and backend have been built and tested locally, and the main payload and optional launcher cross-compile. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
 
-The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostrunner 2, and Prince of Persia: The Lost Crown. Their direct Archive.org sources pass desktop metadata checks. This does not establish that the files will launch, that every edition includes DLC, or that a full console transfer has been tested.
+The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostrunner 2, and Prince of Persia: The Lost Crown. Their direct Archive.org sources pass desktop metadata checks.
 
 The source repository is private. This public repository is the home for documentation, issues, screenshots, and future release downloads. Public binary distribution remains subject to the SDK and dependency licence review.
 
@@ -80,5 +78,3 @@ Catalogue entries reference publicly accessible third-party URLs. **Publicly acc
 All game names, artwork, trademarks, and other third-party materials belong to their respective owners. Orbit is **not affiliated with or endorsed by** Sony Interactive Entertainment, PlayStation, game publishers, or download providers. The app does not supply accounts, credentials, purchase entitlements, or permission to bypass access restrictions.
 
 To report an incorrect entry or a rights concern, open an issue with the affected title, URL, and sufficient information to identify the concern. Do not post private personal information. The underlying hosting provider is responsible for files it hosts; Orbit's maintainers can review catalogue references controlled by this project.
-
-**This notice explains the project's role. It does not override applicable law, third-party licences, or anyone's legal responsibilities.** For background, see the [U.S. Copyright Office's information on copyright and digital files](https://www.copyright.gov/help/faq/faq-digital.html).
