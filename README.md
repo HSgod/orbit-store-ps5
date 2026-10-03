@@ -19,7 +19,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 **This is an early development build. There is no public payload release yet.**
 
-The interface and backend have been built and tested locally, and the main payload and optional launcher cross-compile. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
+The interface and backend have been built and tested locally, and development payloads cross-compile. The one-time installer and launch-from-tile flow are still in development. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
 
 The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostrunner 2, and Prince of Persia: The Lost Crown. Their direct Archive.org sources pass desktop metadata checks.
 
@@ -27,16 +27,16 @@ The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostr
 
 **The ELF is not available for download yet.** Download instructions and a SHA-256 checksum will be added when the first tested release is published.
 
-The planned console workflow is:
+The planned setup and everyday workflow is:
 
-1. Start `orbit_store.elf` with your supported PS5 payload loader.
-2. Open Orbit in the console browser, or visit `http://<ps5-ip>:6971/` from a phone or computer on the same network.
-3. Pair remote devices using the console's six-digit code.
-4. Choose a game, choose storage, and select **Download to PS5**.
+1. **Set up once.** Download and run `orbit_store.elf` through your supported PS5 payload loader. It installs Orbit locally and adds the **Orbit Store** home-screen tile.
+2. **Open from the home screen.** On later visits, select the Orbit Store tile. It starts Orbit as needed and opens the storefront, without sending the ELF again.
+3. **Download on the console.** Choose a game, choose storage, and select **Download to PS5**.
+4. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:6971/` on the same network and pair using the console's six-digit code.
 
-Keep the PS5 awake and the payload running. The control browser can close while downloads continue. After a payload restart, interrupted active transfers become paused so you can review and resume them.
+This flow requires a supported homebrew environment. After a console reboot, that environment must be active before Orbit can run. The installer, tile, and relaunch behaviour must all pass console testing before release.
 
-An optional home-screen shortcut is being developed separately. Its installer changes console app metadata; it will remain separate from the main payload and needs firmware validation before release.
+Keep the PS5 awake while downloading. Closing the storefront leaves downloads running. After an Orbit restart, interrupted transfers become paused so you can review and resume them.
 
 ## Controls and formats
 
@@ -62,7 +62,7 @@ V1 does **not** extract RAR/7z archives, install or launch games, or download in
 
 ## Roadmap
 
-Console validation → dependency clearance → first payload release → more verified direct-file sources. Archive extraction, installation, and additional providers are future work, not advertised as finished features.
+One-time installation and home-screen relaunch → console validation → dependency clearance → first payload release → more verified direct-file sources. Archive extraction, game installation, and additional providers are future work, not advertised as finished features.
 
 ---
 
