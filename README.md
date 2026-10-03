@@ -42,7 +42,7 @@ Check progress, pause a download or queue another game from your phone. Pair it 
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
 - **New games without reinstalling.** Catalogue additions arrive automatically. Check for more in App settings, or keep browsing your last catalogue while offline.
 - **Updates in Orbit.** Check for a release, reinstall when needed, and see which version is running or saved for next start.
-- **A queue you control.** Switch between active, finished and failed downloads, move waiting items up or down, and clear history while keeping downloaded files.
+- **A queue you control.** Switch between active, finished, failed and cancelled downloads, move waiting items up or down, and clear history while keeping downloaded files.
 - **Know what fits.** See free space now, what unfinished downloads still need, and how much will remain afterward.
 - **Find it your way.** Filter by source, format or download size. Sort by title, release date, addition date or size, and save favourites shared with your paired devices.
 - **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
@@ -50,9 +50,9 @@ Check progress, pause a download or queue another game from your phone. Pair it 
 
 ## Beta status
 
-**Orbit Store 0.2.0-beta.5 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.5).
+**Orbit Store 0.3.0 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.3.0).
 
-Startup, icon recovery and offline browsing have been checked on PS5. Automated and desktop/phone checks passed, but online catalogue refresh on PS5, full console downloads, reboot/auto-start and other firmware versions still need testing.
+Version 0.3.0 fixes Archive.org downloads failing with “Provider returned a page instead of a downloadable file.” Startup and a previously failing game-transfer retry passed on PS5. Automated and desktop/phone checks passed; full console downloads, online catalogue refresh, reboot/auto-start and other firmware versions still need testing.
 
 The current downloads are single-file **FFPFSC** files from **Archive.org**. Links were checked for availability; their contents have not been fully downloaded and tested on console.
 
@@ -60,7 +60,7 @@ New games and updated links arrive through catalogue updates. You only need an O
 
 ## Using the beta
 
-Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.5/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.5/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.5) also includes the exact source, dependency sources, and licences.
+Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.3.0/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.3.0/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.3.0) also includes the exact source, dependency sources, and licences.
 
 To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
 
@@ -102,9 +102,9 @@ The panel shows **Running**, **Saved for next start**, and **Latest release** se
 
 ## Managing your downloads
 
-Open **Downloads** and choose **Active**, **Finished** or **Failed**. Move waiting downloads up or down to choose what runs next. Paused items keep their place. A retry countdown tells you when Orbit will try an interrupted download again.
+Open **Downloads** and choose **Active**, **Finished**, **Failed** or **Cancelled**. Finished contains only successfully completed downloads; cancelled items have their own view. Move waiting downloads up or down to choose what runs next. Paused items keep their place. A retry countdown tells you when Orbit will try an interrupted download again.
 
-**Remove from history** and **Clear finished history** keep downloaded files on your drive. A cancelled download with a kept partial file stays listed so you can resume it. To remove it, reconnect its original drive, choose **Partial file options → Delete partial file**, then remove the history entry.
+**Remove from history**, **Clear finished history** and **Clear cancelled history** keep downloaded files on your drive. Each clear button affects only its own view. A cancelled download with a kept partial file stays listed so you can resume it. To remove it, reconnect its original drive, choose **Partial file options → Delete partial file**, then remove the history entry.
 
 Before queuing a game, check **Free now**, **Unfinished downloads** and **After queue + this download**. Paused and failed downloads count toward the estimate; cancelled ones do not. Other apps can change free space, so Orbit checks again when a download starts.
 
@@ -141,6 +141,7 @@ V1 does **not** extract RAR/7z archives, install or launch games, or download in
 - **Drive disconnected:** reconnect the original destination. Orbit will not silently switch to internal storage.
 - **Not enough space:** free space on the selected destination before retrying.
 - **Source changed:** preserve the partial file until you decide to remove it and restart. Orbit will not append a different file to it.
+- **“Provider returned a page” on an older version:** update to 0.3.0, restart Orbit, then open **Downloads → Failed → Retry download**. Existing partial files are checked before resuming. If the provider actually returns an error page, Orbit will still reject it.
 - **Provider throttling:** let the retry delay finish. Orbit respects the provider's `Retry-After` response.
 - **Icon does not open Orbit:** start Orbit through Payload Manager, then open the icon again.
 - **Cannot connect:** check that the payload is running and your device is on the same local network. Orbit uses TCP port **34177**.
