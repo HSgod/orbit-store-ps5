@@ -9,7 +9,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 ## Built around the console
 
 - **Direct to PS5.** Files travel directly from the download provider to your console's selected storage.
-- **A focused collection.** Five curated titles to start, with format and source shown clearly.
+- **A focused collection.** One card per game. Open it to choose from its available sources and formats, with download size and version shown for each option.
 - **Sources you select.** Choose Archive.org, Vikingfile, or both, and acknowledge the download-rights and risk notice before continuing.
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
 - **A queue that remembers.** Pause, resume, retry, and recover interrupted work.
@@ -34,7 +34,7 @@ The planned setup and everyday workflow is:
 2. **Turn on auto-start.** In Orbit, open **Auto-start** and turn it on for your payload manager: Payload Manager, or an existing `autoload.txt` autoloader. Homebrew Launcher lists Orbit in its menu; etaHEN users add the saved copy in the Toolbox.
 3. **Open the icon.** Once Orbit is running, select its home-screen icon to open the storefront.
 4. **Choose your sources.** Sources start off. Select Archive.org, Vikingfile, or both, read the notice, and acknowledge your responsibility to download only content you are legally entitled to access and use.
-5. **Download on the console.** Choose a game, choose storage, and select **Download to PS5**.
+5. **Download on the console.** Open a game, select its source and format under **Download options**, choose storage, and select **Download to PS5**.
 6. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network and pair using the console's six-digit code.
 
 After a reboot, run your jailbreak as usual and your payload manager starts Orbit. The icon opens the running storefront; it cannot start Orbit by itself. Orbit never creates an `autoload.txt`, because a new one would stop your autoloader from opening Payload Manager. This workflow is awaiting console validation.
@@ -52,7 +52,7 @@ Keep the PS5 awake while downloading. Closing the storefront leaves downloads ru
 
 The initial catalogue uses direct **FFPFSC** files from Archive.org. The downloader also accepts curated direct **exFAT** variants when supplied. Vikingfile can be selected in Sources, but currently shows no compatible releases; downloads from it depend on automatic direct-link resolution working on the console.
 
-Source choices are saved on the console and shared by paired devices. Turning off a source hides its games and pauses unfinished downloads without deleting files. Re-enable it and resume those downloads when ready. There is no user library import or custom source entry in this version.
+Source choices are saved on the console and shared by paired devices. Turning off a source hides its download options and pauses unfinished downloads without deleting files. A game stays visible if another enabled source offers it. Re-enable a source and resume its downloads when ready. There is no user library import or custom source entry in this version.
 
 V1 does **not** extract RAR/7z archives, install or launch games, or download in rest mode. “Complete” means the file was saved and passed available validation. Size-only checks are labelled separately from checksum verification.
 
