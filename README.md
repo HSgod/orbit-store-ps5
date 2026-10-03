@@ -20,11 +20,18 @@ Screenshots show a paired preview with example USB storage.
 
 Check progress, pause a download or queue another game from your phone. Pair it with your PS5 on the same network to control the same queue from either screen.
 
-<p>
-  <img src="assets/0.2.0-beta.4/phone-discover.png" width="250" alt="Phone Discover with both game rows">
-  <img src="assets/0.2.0-beta.4/phone-browse.png" width="250" alt="Phone Browse and search">
-  <img src="assets/0.2.0-beta.4/phone-details.png" width="250" alt="Phone game details and download options">
-</p>
+<table>
+  <tr>
+    <th align="center">Discover</th>
+    <th align="center">Browse</th>
+    <th align="center">Download</th>
+  </tr>
+  <tr>
+    <td valign="top" width="33%"><img src="assets/0.2.0-beta.4/phone-discover.png" width="250" alt="Phone Discover with both game rows"></td>
+    <td valign="top" width="33%"><img src="assets/0.2.0-beta.4/phone-browse.png" width="250" alt="Phone Browse and search"></td>
+    <td valign="top" width="33%"><img src="assets/0.2.0-beta.4/phone-details.png" width="250" alt="Phone game details and download options"></td>
+  </tr>
+</table>
 
 ## Built around the console
 
