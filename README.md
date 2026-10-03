@@ -8,6 +8,8 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 ## Desktop
 
+These screenshots show a local preview of the paired interface with example USB storage. Game pages show **Download to PS5** after pairing.
+
 Discover shows **Latest releases** by verified game release date, then **All games**. Browse supports search and pages of 48 games; details keep each game’s source and format options together.
 
 ![Desktop Discover with Latest releases and All games](assets/0.2.0-beta.2/desktop-discover.png)
@@ -16,7 +18,7 @@ Discover shows **Latest releases** by verified game release date, then **All gam
 
 ## Phone
 
-The same storefront adapts to touch controls. These screenshots show the local app preview; game artwork continues to load from external URLs.
+The same paired interface adapts to touch controls. Game artwork continues to load from external URLs. **Pair devices** in the header connects another device; the game-page action is **Download to PS5**.
 
 <p>
   <img src="assets/0.2.0-beta.2/phone-discover.png" width="250" alt="Phone Discover with both game rows">
