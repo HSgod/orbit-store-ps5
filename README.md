@@ -6,7 +6,23 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 [Download the latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest) · [Payload Manager feed](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/payloads.json) · [llms.txt](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/llms.txt)
 
-![Orbit Store desktop preview](assets/orbit-preview.jpg)
+## Desktop
+
+Discover shows **Latest releases** by verified game release date, then **All games**. Browse supports search and pages of 48 games; details keep each game’s source and format options together.
+
+![Desktop Discover with Latest releases and All games](assets/0.2.0-beta.2/desktop-discover.png)
+![Desktop Browse with search and the expanded catalogue](assets/0.2.0-beta.2/desktop-browse.png)
+![Desktop game details with single-file download options](assets/0.2.0-beta.2/desktop-details.png)
+
+## Phone
+
+The same storefront adapts to touch controls. These screenshots show the local app preview; game artwork continues to load from external URLs.
+
+<p>
+  <img src="assets/0.2.0-beta.2/phone-discover.png" width="250" alt="Phone Discover with both game rows">
+  <img src="assets/0.2.0-beta.2/phone-browse.png" width="250" alt="Phone Browse and search">
+  <img src="assets/0.2.0-beta.2/phone-details.png" width="250" alt="Phone game details and download options">
+</p>
 
 ## Built around the console
 
@@ -20,17 +36,17 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 ## Beta status
 
-**Orbit Store 0.2.0-beta.1 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.1).
+**Orbit Store 0.2.0-beta.2 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.2).
 
-Startup, Media-tab icon registration and opening Orbit from that icon were confirmed on a test PS5 on 3 October 2026. Local tests cover downloads, pause/resume and recovery. Full console transfers, reboot/auto-start and broader firmware compatibility remain unverified in this beta.
+Local tests cover downloads, pause/resume and recovery. Desktop and phone browser checks cover the two Discover rows, search, pagination and game details. Full console transfers, reboot/auto-start and broader firmware compatibility remain unverified in this beta.
 
-The beta contains 20 games, including the original five and 15 newer additions. Each included source passes an exact filename/size check, a download-header check and a bounded range request. These are link-availability checks; full console downloads have not been verified.
+The beta contains **147 games**, each with a direct single-file FFPFSC download option. Every included option has matching file metadata, download headers and bounded-range verification evidence; newly imported files receive fresh range checks. These are link-availability checks; full console downloads have not been verified.
 
-A shared metadata snapshot supplies game details and external artwork URLs. Cover images load as you browse; large background art loads for the focused game. Artwork is fetched from publishers’ servers and is not uploaded to these repositories or bundled in Orbit.
+A shared metadata snapshot supplies verified game details and external artwork URLs. Unsourced details stay empty; the Latest releases row uses known PS5 release dates and excludes future releases. All games includes every available title. Cover images load as you browse; large background art loads for the focused game. Artwork loads from external publisher and catalogue URLs. Individual game image assets are not stored in the repository or bundled in Orbit; the images above are screenshots of the interface.
 
 ## Using the beta
 
-Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.1/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.1/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.1) also includes the exact source, dependency sources, and licences.
+Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.2/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.2/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.2) also includes the exact source, dependency sources, and licences.
 
 To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
 
@@ -62,7 +78,7 @@ Keep the PS5 awake while downloading. Closing the storefront leaves downloads ru
 | Circle / Escape | Back or close details |
 | Touch / mouse | Select visible controls |
 
-The initial catalogue uses direct **FFPFSC** files from Archive.org. The downloader also accepts curated direct **exFAT** variants when supplied. Vikingfile can be selected in Sources, but currently shows no compatible releases; downloads from it depend on automatic direct-link resolution working on the console.
+The catalogue uses direct **FFPFSC** files from Archive.org. The downloader also accepts curated direct **exFAT** variants when supplied. Vikingfile can be selected in Sources, but currently shows no compatible releases; downloads from it depend on automatic direct-link resolution working on the console.
 
 Source choices are saved on the console and shared by paired devices. Turning off a source hides its download options and pauses unfinished downloads without deleting files. A game stays visible if another enabled source offers it. Re-enable a source and resume its downloads when ready. There is no user library import or custom source entry in this version.
 

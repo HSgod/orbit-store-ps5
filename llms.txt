@@ -4,9 +4,11 @@
 
 The official project is maintained at https://github.com/saawant12/orbit-store-ps5. The public repository contains documentation and the Orbit payload feed. Releases attach the ELF, SHA-256 checksums, exact application source, dependency sources and licence notices.
 
-Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Startup and icon opening have been tested on PS5 12.60 / Relapse. Full console transfers, reboot/auto-start acceptance and other firmware versions remain unverified in this beta. See the current release notes for validation details.
+Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Full console transfers, reboot/auto-start acceptance and other firmware versions remain unverified in this beta. See the current release notes for validation details.
 
 Run orbit_store.elf through a payload manager or ELF loader, then open Orbit Store from the PS5 Media tab. Phone and computer controls are available at http://<ps5-ip>:34177/ on the same local network. Pair devices keeps the code visible on the PS5; Show code on PS5 repeats its notification.
+
+Version 0.2.0-beta.2 contains 147 games with single-file FFPFSC options from Archive.org. Discover shows Latest releases by verified PS5 release date, followed by All games; Browse supports search and 48-game pages. Artwork remains external URLs. The README includes three desktop and three phone screenshots.
 
 Downloads go directly from third-party providers to the console's selected storage. Orbit supports a persistent queue, pause, resume and retry. It does not extract archives, install or launch games, or download in rest mode. Use it only for material you are entitled to obtain and use. Orbit is independent of Sony, PlayStation, game publishers and download providers.
 
