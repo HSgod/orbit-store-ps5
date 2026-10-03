@@ -12,18 +12,18 @@ These screenshots show a local preview of the paired interface with example USB 
 
 Discover shows **Latest releases** by verified game release date, then **All games**. Browse supports search and pages of 48 games; details keep each game’s source and format options together.
 
-![Desktop Discover with Latest releases and All games](assets/0.2.0-beta.2/desktop-discover.png)
-![Desktop Browse with search and the expanded catalogue](assets/0.2.0-beta.2/desktop-browse.png)
-![Desktop game details with single-file download options](assets/0.2.0-beta.2/desktop-details.png)
+![Desktop Discover with Latest releases and All games](assets/0.2.0-beta.3/desktop-discover.png)
+![Desktop Browse with search and the expanded catalogue](assets/0.2.0-beta.3/desktop-browse.png)
+![Desktop game details with single-file download options](assets/0.2.0-beta.3/desktop-details.png)
 
 ## Phone
 
 The same paired interface adapts to touch controls. Game artwork continues to load from external URLs. **Pair devices** in the header connects another device; the game-page action is **Download to PS5**.
 
 <p>
-  <img src="assets/0.2.0-beta.2/phone-discover.png" width="250" alt="Phone Discover with both game rows">
-  <img src="assets/0.2.0-beta.2/phone-browse.png" width="250" alt="Phone Browse and search">
-  <img src="assets/0.2.0-beta.2/phone-details.png" width="250" alt="Phone game details and download options">
+  <img src="assets/0.2.0-beta.3/phone-discover.png" width="250" alt="Phone Discover with both game rows">
+  <img src="assets/0.2.0-beta.3/phone-browse.png" width="250" alt="Phone Browse and search">
+  <img src="assets/0.2.0-beta.3/phone-details.png" width="250" alt="Phone game details and download options">
 </p>
 
 ## Built around the console
@@ -32,15 +32,16 @@ The same paired interface adapts to touch controls. Game artwork continues to lo
 - **A focused collection.** One card per game. Open it to choose from its available sources and formats, with download size and version shown for each option.
 - **Sources you select.** Choose Archive.org, Vikingfile, or both, and acknowledge the download-rights and risk notice before continuing.
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
+- **Updates in Orbit.** Check for a release, reinstall when needed, and see which version is running or saved for next start.
 - **A queue that remembers.** Pause, resume, retry, and recover interrupted work.
 - **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
 - **No account. No telemetry.** Pair your local device with the code shown on your console.
 
 ## Beta status
 
-**Orbit Store 0.2.0-beta.2 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.2).
+**Orbit Store 0.2.0-beta.3 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.3).
 
-Local tests cover downloads, pause/resume and recovery. Desktop and phone browser checks cover the two Discover rows, search, pagination and game details. Full console transfers, reboot/auto-start and broader firmware compatibility remain unverified in this beta.
+Local tests cover downloads, pause/resume, recovery, verified update/reinstall and graceful shutdown. Desktop and phone browser checks cover the two Discover rows, search, pagination and game details. Full console transfers, reboot/auto-start and broader firmware compatibility remain unverified in this beta.
 
 The beta contains **147 games**, each with a direct single-file FFPFSC download option. Every included option has matching file metadata, download headers and bounded-range verification evidence; newly imported files receive fresh range checks. These are link-availability checks; full console downloads have not been verified.
 
@@ -48,7 +49,7 @@ A shared metadata snapshot supplies verified game details and external artwork U
 
 ## Using the beta
 
-Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.2/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.2/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.2) also includes the exact source, dependency sources, and licences.
+Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.3/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.3/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.3) also includes the exact source, dependency sources, and licences.
 
 To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
 
@@ -61,7 +62,7 @@ Open the **Orbit Store** source, download **Orbit Store (Beta)**, then run `orbi
 The setup and everyday workflow is:
 
 1. **Run it once.** Run `orbit_store.elf` through your payload manager or ELF loader. Orbit starts, saves itself on the console, and adds the **Orbit Store** home-screen icon.
-2. **Turn on auto-start.** In Orbit, open **Auto-start** and turn it on for your payload manager: Payload Manager, or an existing `autoload.txt` autoloader. Homebrew Launcher lists Orbit in its menu; etaHEN users add the saved copy in the Toolbox.
+2. **Turn on auto-start.** In Orbit, open **App settings → Start automatically** and turn it on for your payload manager: Payload Manager, or an existing `autoload.txt` autoloader. Homebrew Launcher lists Orbit in its menu; etaHEN users add the saved copy in the Toolbox.
 3. **Open the icon.** Once Orbit is running, select its home-screen icon to open the storefront.
 4. **Choose your sources.** Sources start off. Select Archive.org, Vikingfile, or both, read the notice, and acknowledge your responsibility to download only content you are legally entitled to access and use.
 5. **Download on the console.** Open a game, select its source and format under **Download options**, choose storage, and select **Download to PS5**.
@@ -70,6 +71,21 @@ The setup and everyday workflow is:
 After a reboot, run your jailbreak as usual and your payload manager starts Orbit. The icon opens the running storefront; it cannot start Orbit by itself. Orbit never creates an `autoload.txt`, because a new one would stop your autoloader from opening Payload Manager. The reboot and auto-start workflow is awaiting full console validation.
 
 Keep the PS5 awake while downloading. Closing the storefront leaves downloads running. After an Orbit restart, interrupted transfers become paused so you can review and resume them.
+
+## Updating or reinstalling Orbit
+
+**Coming from beta.2 or earlier:** download the new ELF and replace the existing `orbit_store.elf` in Payload Manager. Accept its overwrite/reinstall prompt. Pause downloads, stop only the identifiable Orbit process in Payload Manager’s **Active Processes**, then run the new ELF. If you cannot confidently identify the process, restart the console when convenient, run the jailbreak and launch the new ELF. Keep the Orbit icon and its saved data.
+
+Loading an ELF while Orbit is already running saves the replacement for the next start. It does not switch the active session. The notification now explains this; an existing icon is expected and does not need to be removed.
+
+**From beta.3 onward:**
+
+1. Open **App settings → Update / reinstall → Check for updates**.
+2. Choose **Install update**, or **Reinstall release** for the current published version. Orbit downloads the official ELF and verifies its SHA-256 checksum before replacing the saved copy.
+3. When **Restart needed** appears, select **Stop Orbit to restart** and confirm. Your queue is saved and paused; other payloads keep running.
+4. Run the saved `orbit_store.elf` from your payload manager and reopen Orbit. Review and resume your downloads.
+
+The panel shows **Running**, **Saved for next start**, and **Latest release** separately. Pairing, source choices and the download queue are preserved. Updates are manual; no release is installed just by opening the panel. If a download or copy fails, Orbit reports the error and leaves the running session open for a retry.
 
 ## Controls and formats
 

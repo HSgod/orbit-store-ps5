@@ -4,11 +4,11 @@
     {
       "name": "Orbit Store (Beta)",
       "filename": "orbit_store.elf",
-      "url": "https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.2/orbit_store.elf",
-      "description": "A modern PS5 download manager with resumable downloads and phone controls. Beta with 147 single-file games and two Discover rows.",
-      "version": "v0.2.0-beta.2",
+      "url": "https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.3/orbit_store.elf",
+      "description": "A modern PS5 download manager with resumable downloads and phone controls. Beta with 147 single-file games, verified in-app updates and reinstall.",
+      "version": "v0.2.0-beta.3",
       "category": "Utilities",
-      "checksum": "a065f2bf6446397bb4284fff93c028fb132d0ddb8d7045724b849a546d431725"
+      "checksum": "3cb4f9e513f952040ab7131877e5902b12d45649d6abc1b2a02b383d7b136a01"
     }
   ]
 }
