@@ -1,0 +1,33 @@
+# Orbit Store (Beta)
+
+> A modern PS5 download manager with resumable downloads and phone controls. Orbit runs on the console as an ELF payload and serves a controller-friendly interface on the TV and a browser interface on the local network.
+
+The official project is maintained at https://github.com/saawant12/orbit-store-ps5. The public repository contains documentation and the Orbit payload feed. Releases attach the ELF, SHA-256 checksums, exact application source, dependency sources and licence notices.
+
+Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Startup and icon opening have been tested on PS5 12.60 / Relapse. Full console transfers, reboot/auto-start acceptance and other firmware versions remain unverified in this beta. See the current release notes for validation details.
+
+Run orbit_store.elf through a payload manager or ELF loader, then open Orbit Store from the PS5 Media tab. Phone and computer controls are available at http://<ps5-ip>:34177/ on the same local network. Pair devices keeps the code visible on the PS5; Show code on PS5 repeats its notification.
+
+Downloads go directly from third-party providers to the console's selected storage. Orbit supports a persistent queue, pause, resume and retry. It does not extract archives, install or launch games, or download in rest mode. Use it only for material you are entitled to obtain and use. Orbit is independent of Sony, PlayStation, game publishers and download providers.
+
+Orbit Store is licensed under GPL-3.0-or-later. The complete source corresponding to each released ELF and its dependency licences are included with that release.
+
+## Documentation
+
+- [README and installation guide](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md): Features, setup, pairing, controls, beta limits and troubleshooting.
+- [Official project](https://github.com/saawant12/orbit-store-ps5): Public repository and project updates.
+
+## Downloads
+
+- [Current release](https://github.com/saawant12/orbit-store-ps5/releases/latest): Version, changelog, validation notes, source archives and licence bundle.
+- [Current ELF](https://github.com/saawant12/orbit-store-ps5/releases/latest/download/orbit_store.elf): The Orbit application payload.
+- [ELF SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/latest/download/orbit_store.elf.sha256): Verify the downloaded payload before loading it.
+- [Payload Manager feed](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/payloads.json): Add this URL in Payload Manager under Settings, Manage Sources, Add Source. The feed contains Orbit's ELF URL, version and checksum.
+
+## Support
+
+- [Issues](https://github.com/saawant12/orbit-store-ps5/issues): Report problems with the Orbit version, PS5 firmware, loader and steps to reproduce. Keep pairing codes and private information out of reports.
+
+## Optional
+
+- [Payload Manager custom repository guide](https://github.com/itsPLK/ps5-payload-manager/blob/main/CUSTOM_REPOSITORIES.md): Upstream feed format and source setup instructions.

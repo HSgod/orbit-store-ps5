@@ -4,6 +4,8 @@
 
 Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse on the TV, or manage the same console from your phone. Downloads travel directly from third-party hosts to your PS5 and the drive attached to it.
 
+[Download the latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest) · [Payload Manager feed](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/payloads.json) · [llms.txt](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/llms.txt)
+
 ![Orbit Store desktop preview](assets/orbit-preview.jpg)
 
 ## Built around the console
@@ -29,6 +31,14 @@ A shared metadata snapshot supplies game details and external artwork URLs. Cove
 ## Using the beta
 
 Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.1/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.2.0-beta.1/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.2.0-beta.1) also includes the exact source, dependency sources, and licences.
+
+To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
+
+```text
+https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/payloads.json
+```
+
+Open the **Orbit Store** source, download **Orbit Store (Beta)**, then run `orbit_store.elf`. The feed includes its version and SHA-256 checksum using the [Payload Manager repository format](https://github.com/itsPLK/ps5-payload-manager/blob/main/CUSTOM_REPOSITORIES.md).
 
 The setup and everyday workflow is:
 
