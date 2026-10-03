@@ -10,6 +10,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 - **Direct to PS5.** Files travel directly from the download provider to your console's selected storage.
 - **A focused collection.** Five curated titles to start, with format and source shown clearly.
+- **Sources you select.** Choose Archive.org, Vikingfile, or both, and acknowledge the download-rights and risk notice before continuing.
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
 - **A queue that remembers.** Pause, resume, retry, and recover interrupted work.
 - **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
@@ -19,7 +20,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 **This is an early development build. There is no public payload release yet.**
 
-The interface and backend have been built and tested locally. First-run home-screen icon setup is integrated into the development payload. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
+The interface and backend have been built and tested locally. First-run home-screen icon setup and payload-manager auto-start are integrated into the development payload. **Actual PS5 testing is still pending.** Firmware 12.60 / Relapse is the first intended target; compatibility has not been established.
 
 The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostrunner 2, and Prince of Persia: The Lost Crown. Their direct Archive.org sources pass desktop metadata checks.
 
@@ -29,13 +30,14 @@ The initial five entries are Cyberpunk 2077, Elden Ring Nightreign, Sifu, Ghostr
 
 The planned setup and everyday workflow is:
 
-1. **Run it once.** Add `orbit_store.elf` to Payload Manager and run it. Orbit starts in the background and adds the **Orbit Store** home-screen icon on its first successful run.
-2. **Start Orbit each session.** Set it to autoload in Payload Manager, or run the same ELF manually whenever needed. The existing icon is retained.
+1. **Run it once.** Run `orbit_store.elf` through your payload manager or ELF loader. Orbit starts, saves itself on the console, and adds the **Orbit Store** home-screen icon.
+2. **Turn on auto-start.** In Orbit, open **Auto-start** and turn it on for your payload manager: Payload Manager, or an existing `autoload.txt` autoloader. Homebrew Launcher lists Orbit in its menu; etaHEN users add the saved copy in the Toolbox.
 3. **Open the icon.** Once Orbit is running, select its home-screen icon to open the storefront.
-4. **Download on the console.** Choose a game, choose storage, and select **Download to PS5**.
-5. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network and pair using the console's six-digit code.
+4. **Choose your sources.** Sources start off. Select Archive.org, Vikingfile, or both, read the notice, and acknowledge your responsibility to download only content you are legally entitled to access and use.
+5. **Download on the console.** Choose a game, choose storage, and select **Download to PS5**.
+6. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network and pair using the console's six-digit code.
 
-After a reboot, activate your supported homebrew environment and let Payload Manager start Orbit, automatically or manually. The icon opens the running storefront; Payload Manager handles starting the payload. This workflow is awaiting console validation.
+After a reboot, run your jailbreak as usual and your payload manager starts Orbit. The icon opens the running storefront; it cannot start Orbit by itself. Orbit never creates an `autoload.txt`, because a new one would stop your autoloader from opening Payload Manager. This workflow is awaiting console validation.
 
 Keep the PS5 awake while downloading. Closing the storefront leaves downloads running. After an Orbit restart, interrupted transfers become paused so you can review and resume them.
 
@@ -48,7 +50,9 @@ Keep the PS5 awake while downloading. Closing the storefront leaves downloads ru
 | Circle / Escape | Back or close details |
 | Touch / mouse | Select visible controls |
 
-The initial catalogue uses direct **FFPFSC** files. The downloader also accepts curated direct **exFAT** variants when supplied. Vikingfile support will be enabled only after automatic direct-link resolution works on the console.
+The initial catalogue uses direct **FFPFSC** files from Archive.org. The downloader also accepts curated direct **exFAT** variants when supplied. Vikingfile can be selected in Sources, but currently shows no compatible releases; downloads from it depend on automatic direct-link resolution working on the console.
+
+Source choices are saved on the console and shared by paired devices. Turning off a source hides its games and pauses unfinished downloads without deleting files. Re-enable it and resume those downloads when ready. There is no user library import or custom source entry in this version.
 
 V1 does **not** extract RAR/7z archives, install or launch games, or download in rest mode. “Complete” means the file was saved and passed available validation. Size-only checks are labelled separately from checksum verification.
 
