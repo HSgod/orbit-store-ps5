@@ -8,7 +8,7 @@ Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Full 
 
 Run orbit_store.elf through a payload manager or ELF loader, then open Orbit Store from the PS5 Media tab. Phone and computer controls are available at http://<ps5-ip>:34177/ on the same local network. Pair devices keeps the code visible on the PS5; Show code on PS5 repeats its notification.
 
-Version 0.4.2 starts with 147 games, each available as a single-file FFPFSC download from Archive.org. Explore recent releases or search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
+Version 0.5.0 starts with 581 games, with single-file FFPFSC and exFAT options across Archive.org and Vikingfile. Browse opens first and sorts by release date, newest first; games without dates appear afterward. Search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
 
 Library shows installed games and drive sources, with scan, mount/unmount and copy/move actions when supported by a compatible ShadowMount v1 local API. Storage shows capacity and game sizes measured on request. Library and storage operations have local fixture coverage; console acceptance remains pending.
 
@@ -16,15 +16,21 @@ Payload-manager integration is opt-in. App settings → Payload managers → Add
 
 Catalogue additions and updated links arrive automatically. App settings → Game catalogue → Refresh catalogue checks for additions manually. The last available catalogue remains accessible offline; an internet connection is needed to download games. Queued downloads keep the files originally chosen. App features and fixes still require an Orbit update. To restore a deleted Orbit icon, start Orbit through the payload manager; settings and the download queue stay saved.
 
-Version 0.4.2 adds two connections for large downloads when the host supports ranges and a strong file identity. Other downloads use one connection. It also fixes Browse search navigation: Up returns to the page tab, Down enters results or collection controls, and Left/Right keep text editing.
+Orbit supports two connections for large downloads when the host supports ranges and a strong file identity. Other downloads use one connection. It also fixes Browse search navigation: Up returns to the page tab, Down enters results or collection controls, and Left/Right keep text editing.
 
-Orbit 0.4.2 checks for updates on opening and displays a dismissible notice when a newer version is available. Installation and restart remain manual. After upgrading, use 0.4.2 or later because older builds cannot read its saved queue format.
+Orbit checks for updates on opening and displays a dismissible notice when a newer version is available. Installation and restart remain manual. After upgrading, use 0.4.2 or later because older builds cannot read its saved queue format.
 
 App settings includes Update / reinstall. A paired user can check the fixed official release feed, download a checksum-verified ELF, and see running versus saved versions. Stop Orbit to restart preserves the paused queue; the user then starts /data/orbit-store/orbit_store.elf or an opted-in synced copy from their payload manager. Manually imported copies outside sync need replacing by the user. Older installations need one manual ELF replacement and Orbit restart to get these controls.
 
-Downloads go directly from third-party providers to the console's selected storage. Orbit supports a persistent reorderable queue, Active/Finished/Failed/Cancelled views, pause, resume, retry countdowns and history cleanup without deleting completed files. Storage estimates include unfinished downloads. Browse has source/format/size filters, sorting, shared favourites and a 30-day Recently added filter. It does not extract archives, directly install packages, launch games, or download in rest mode. A confirmed ShadowMount scan may register or mount discovered games. Use it only for material you are entitled to obtain and use. Orbit is independent of Sony, PlayStation, game publishers and download providers.
+Downloads go directly from third-party providers to the console's selected storage. Orbit supports a persistent reorderable queue, Active/Finished/Failed/Cancelled views, pause, resume, retry countdowns and history cleanup without deleting completed files. Storage estimates include unfinished downloads. Browse has source/format/size filters, release-date/title/size sorting and shared favourites. It does not extract archives, directly install packages, launch games, or download in rest mode. A confirmed ShadowMount scan may register or mount discovered games. Use it only for material you are entitled to obtain and use. Orbit is independent of Sony, PlayStation, game publishers and download providers.
 
 Orbit Store is licensed under GPL-3.0-or-later. The complete source corresponding to each released ELF and its dependency licences are included with that release.
+
+Vikingfile file-page options require Orbit 0.5.0 or later. Choose a drive and Open download page on PS5, complete verification if requested, press Download on Vikingfile, then return to Orbit and open Downloads. Orbit validates the exact file before queueing it. The provider browser runs on PS5 even when started from a paired device. Sources remain opt-in.
+
+Diagnostics in App settings lets the user view and copy a local report. Reports omit pairing codes, access tokens, download links, game names and paths; they are not sent automatically.
+
+Versions through 0.4.2 use the Archive-only catalogue.json feed. Version 0.5.0 and later use catalogue-v2.json. Missing dates can be corrected through catalogue updates without reinstalling Orbit.
 
 ## Documentation
 

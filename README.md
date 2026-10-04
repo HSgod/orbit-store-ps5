@@ -8,7 +8,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 ## Desktop
 
-Find your next download in **Latest releases**, or search the full catalogue. Open a game to check its size, version and available download options before you choose.
+Open straight into **Browse**, or explore **Discover** and its Latest releases row. Open a game to check its size, version and available download options before you choose.
 
 Screenshots show a paired local preview with sample USB storage and Library data. They illustrate the interface, not a live console session.
 
@@ -52,7 +52,7 @@ Check progress, pause a download or queue another game from your phone. Pair it 
 ## Built around the console
 
 - **Direct to PS5.** Files travel directly from the download provider to your console's selected storage.
-- **One file per game.** Start with 147 games to browse, each available as a single download. No archive parts to collect.
+- **One file per game.** Start with 581 games to browse, each available as a single download. No archive parts to collect.
 - **A focused collection.** One card per game. Open it to choose from its available sources and formats, with download size and version shown for each option.
 - **Sources you select.** Choose Archive.org, Vikingfile, or both, and acknowledge the download-rights and risk notice before continuing.
 - **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
@@ -62,27 +62,27 @@ Check progress, pause a download or queue another game from your phone. Pair it 
 - **Updates in Orbit.** Get a notice when a newer release is available, open its update panel or dismiss it, and choose when to install and restart.
 - **A queue you control.** Switch between active, finished, failed and cancelled downloads, move waiting items up or down, and clear history while keeping downloaded files.
 - **Know what fits.** See free space now, what unfinished downloads still need, and how much will remain afterward.
-- **Find it your way.** Filter by source, format or download size. Sort by title, release date, addition date or size, and save favourites shared with your paired devices.
+- **Find it your way.** Filter by source, format or download size. Start with newest releases first, or sort by title or download size, and save favourites shared with your paired devices.
 - **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
 - **No account. No telemetry.** Pair your local device with the code shown on your console.
 
 ## Beta status
 
-**Orbit Store 0.4.2 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.4.2).
+**Orbit Store 0.5.0 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.5.0).
 
-Version 0.4.2 adds **two connections for supported downloads**, an **update notice when you open Orbit**, and **smoother Browse navigation**. Pause and resume still control one download. Search supports Up to return to the Browse tab and Down to reach results, including a way out when no games match. Download speed depends on the provider, network and drive.
+Version 0.5.0 adds **Vikingfile downloads on PS5**, **581 games**, **Browse as the opening page** and **Diagnostics in App settings**. Browse starts with the newest known release dates; undated games follow alphabetically. Release dates and other metadata will continue to improve through catalogue updates.
 
 **Payload-manager setup is opt-in.** Choose **App settings → Payload managers → Add Orbit** to let Orbit add and update a copy. Existing copies stay in place until you choose whether to allow updates. Auto-start is a separate choice, and Orbit leaves your manager's global Autoload switch unchanged.
 
 Local automated tests and desktop/phone checks cover these features. Library requires ShadowMount's compatible v1 local API; actions depend on the capabilities it exposes. Console acceptance for Library operations, full downloads, online catalogue refresh, reboot/auto-start and broader firmware support remains pending. The reported etaHEN toggle interaction is still under investigation.
 
-The current downloads are single-file **FFPFSC** files from **Archive.org**. Links were checked for availability; their contents have not been fully downloaded and tested on console.
+Downloads are single-file **FFPFSC** and **exFAT** options across **Archive.org** and **Vikingfile**. The available sources and formats depend on the game. File listings or bounded file responses were checked; full game downloads have not all been tested on console.
 
 New games and updated links arrive through catalogue updates. You only need an Orbit app update for new features and fixes. Your queued downloads keep the files you originally chose.
 
 ## Using the beta
 
-Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.2/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.2/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.4.2) also includes the exact source, dependency sources, and licences.
+Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.5.0/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.5.0/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.5.0) also includes the exact source, dependency sources, and licences.
 
 To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
 
@@ -98,7 +98,7 @@ The setup and everyday workflow is:
 2. **Choose manager setup.** Optionally open **App settings → Payload managers → Add Orbit** for Payload Manager or Homebrew Launcher. This adds a copy and lets Orbit keep it current. Auto-start is separate: use **Start automatically**, then enable the global Autoload switch yourself in Payload Manager if needed. Existing `autoload.txt` lists are supported; etaHEN setup is manual in its Toolbox.
 3. **Open the icon.** Once Orbit is running, select its home-screen icon to open the storefront.
 4. **Choose your sources.** Sources start off. Select Archive.org, Vikingfile, or both, read the notice, and acknowledge your responsibility to download only content you are legally entitled to access and use.
-5. **Download on the console.** Open a game, select its source and format under **Download options**, choose storage, and select **Download to PS5**.
+5. **Download on the console.** Open a game, select its source and format under **Download options**, choose storage, and select **Download to PS5** for a direct option. For a Vikingfile browser option, select **Open download page on PS5**, complete any verification and press Download on Vikingfile, then return to Orbit and open Downloads. Orbit checks the file before adding it to the queue.
 6. **Use your phone if you want.** While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network and select **Pair devices**. Enter the console's six-digit code. Choose **Show code on PS5** if you missed the notification, or open **Pair devices** on the console to keep the code visible until you close it.
 
 After a reboot, run your jailbreak as usual, then start Orbit manually or through auto-start you have configured. The icon opens the running storefront; it cannot start Orbit by itself. Orbit never creates an `autoload.txt`, because a new one would stop your autoloader from opening Payload Manager. The reboot and auto-start workflow is awaiting full console validation.
@@ -151,7 +151,7 @@ If ShadowMount is absent or its API is incompatible, Library explains what is mi
 
 ## Finding and saving games
 
-In **Browse**, combine source, format and download-size filters, then choose a sort order. Size sorting uses the smallest option matching your filters. **Recently added** shows titles added to Orbit within the last 30 days; **Latest releases** follows game release dates.
+In **Browse**, combine source, format and download-size filters, then choose a sort order. Size sorting uses the smallest option matching your filters. **Release date (newest first)** is the default. Games without a recorded date appear afterward, alphabetically. **Reset filters** restores this order.
 
 Open a game's details and choose **Add to favourites**. Your favourites are shared between the console and paired devices and stay saved after restarting Orbit. Disabling a source hides its games without forgetting your favourites.
 
@@ -172,7 +172,7 @@ If your connection drops, you can still browse the last available catalogue. Rec
 | Circle / Escape | Back or close details |
 | Touch / mouse | Select visible controls |
 
-The catalogue uses direct **FFPFSC** files from Archive.org. The downloader also accepts curated direct **exFAT** variants when supplied. Vikingfile can be selected in Sources, but currently shows no compatible releases; downloads from it depend on automatic direct-link resolution working on the console.
+The catalogue offers single-file **FFPFSC** and **exFAT** options across Archive.org and Vikingfile. Choose the source and format inside a game’s page. Vikingfile browser options require Orbit 0.5.0 or later and use the console browser steps described above; older Orbit versions keep their Archive.org catalogue.
 
 Source choices are saved on the console and shared by paired devices. Turning off a source hides its download options and pauses unfinished downloads without deleting files. A game stays visible if another enabled source offers it. Re-enable a source and resume its downloads when ready. There is no user library import or custom source entry in this version.
 
