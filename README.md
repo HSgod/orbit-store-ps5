@@ -50,23 +50,17 @@ These screenshots show the **0.5.0 interface** with the current catalogue and ex
 
 Pair a phone on the same network to find a game and choose its download option. Files still go to the PS5’s selected drive. Vikingfile’s provider page and any verification open on the **PS5**, even when you start from your phone.
 
-<table>
-  <tr>
-    <th width="33%">1. Find a game</th>
-    <th width="33%">2. Compare options</th>
-    <th width="33%">3. Start the provider step</th>
-  </tr>
-  <tr>
-    <td valign="top"><img src="assets/0.5.0/phone-browse.jpg" width="250" alt="Phone Browse with search and game cards"></td>
-    <td valign="top"><img src="assets/0.5.0/phone-details.jpg" width="250" alt="Phone game details with Archive.org and Vikingfile choices"></td>
-    <td valign="top"><img src="assets/0.5.0/phone-viking.jpg" width="250" alt="Phone Vikingfile instructions and Open download page on PS5 button"></td>
-  </tr>
-  <tr>
-    <td valign="top">Search the catalogue and filter the available games.</td>
-    <td valign="top">Check the format, size and destination before downloading.</td>
-    <td valign="top">Open Vikingfile on PS5, press Download there, then return to Orbit.</td>
-  </tr>
-</table>
+1. **Find a game.** Search the catalogue and filter the available games.
+2. **Compare options.** Check the format, size and destination before downloading.
+3. **Start the provider step.** Open Vikingfile on PS5, press Download there, then return to Orbit.
+
+<p>
+  <a href="assets/0.5.0/phone-browse.jpg"><img src="assets/0.5.0/phone-browse.jpg" width="250" align="top" alt="Step 1: Phone Browse with search and game cards"></a>
+  <a href="assets/0.5.0/phone-details.jpg"><img src="assets/0.5.0/phone-details.jpg" width="250" align="top" alt="Step 2: Phone game details with Archive.org and Vikingfile choices"></a>
+  <a href="assets/0.5.0/phone-viking.jpg"><img src="assets/0.5.0/phone-viking.jpg" width="250" align="top" alt="Step 3: Phone Vikingfile instructions and Open download page on PS5 button"></a>
+</p>
+
+*Select a screenshot to open it at full size.*
 
 For your existing collection, the [Library guide](guides/library.md) explains installed, mounted and on-drive status, plus the actions available through ShadowMount.
 
