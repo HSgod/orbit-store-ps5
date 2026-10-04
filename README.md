@@ -31,25 +31,29 @@ The TV app includes Orbit's download service and can start it through a compatib
 
 ## See how it works
 
-These screenshots show the **0.5.0 browser interface**, which remains available alongside the native TV app. Storage, pairing and Library entries use local sample console data.
+Open Orbit from your Games row and use the controller to browse, explore and choose a download. The native app shares your catalogue, favourites and download queue with the browser version.
+
+*Native app previews rendered locally from the 0.6.0 app code with the current catalogue and sample drive data.*
 
 ### Browse, discover and choose a download
 
-**Find your next game.** Browse opens first, with search, source and format filters, and the newest known releases first. Games without a recorded release date follow afterward.
+**Find your next game.** Search by name or title ID, narrow the collection by source, format or size, and browse the newest known releases first.
 
-![Browse 581 games with search, filters and release-date sorting](assets/0.5.0/desktop-browse.jpg)
+![Native TV app Browse with 581 games, search and download filters](assets/0.6.0/native-browse.png)
 
-**Explore the collection.** Discover brings together Latest releases and All games. Select a title to see its artwork and open its details.
+**Explore on the big screen.** Discover brings game artwork, Latest releases and All games together. Use your controller to move through the collection and open a title.
 
-![Discover with game artwork, Latest releases and All games](assets/0.5.0/desktop-discover.jpg)
+![Native TV app Discover with featured artwork and game collections](assets/0.6.0/native-discover.png)
 
-**Choose how to download.** A game’s page shows its available sources and formats together. Vikingfile options explain when to open the provider page, press Download there, and return to Orbit. See the [download guide](guides/downloads.md) for the complete flow.
+**Check the details before downloading.** Read about a game, save it to favourites and compare its available download options. Direct options download from the TV app; Vikingfile browser options open the browser version. See the [download guide](guides/downloads.md) for the complete flow.
 
-![Game details with Archive.org and Vikingfile options and the PS5 browser instructions](assets/0.5.0/desktop-viking.jpg)
+![Native TV app game details with artwork, description and download options](assets/0.6.0/native-details.png)
 
 ### The same queue on your phone
 
 Pair a phone on the same network to find a game and choose its download option. Files still go to the PS5’s selected drive. Vikingfile’s provider page and any verification open on the **PS5**, even when you start from your phone.
+
+*The phone screenshots below show the 0.5.0 browser interface with local sample storage and pairing data.*
 
 1. **Find a game.** Search the catalogue and filter the available games.
 2. **Compare options.** Check the format, size and destination before downloading.
