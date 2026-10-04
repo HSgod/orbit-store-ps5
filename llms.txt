@@ -8,7 +8,7 @@ Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Full 
 
 Run orbit_store.elf through a payload manager or ELF loader, then open Orbit Store from the PS5 Media tab. Phone and computer controls are available at http://<ps5-ip>:34177/ on the same local network. Pair devices keeps the code visible on the PS5; Show code on PS5 repeats its notification.
 
-Version 0.5.0 starts with 581 games, with single-file FFPFSC and exFAT options across Archive.org and Vikingfile. Browse opens first and sorts by release date, newest first; games without dates appear afterward. Search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
+Version 0.5.1 includes UI fixes on Browse and Discover. Orbit offers 581 games, with single-file FFPFSC and exFAT options across Archive.org and Vikingfile. Browse opens first and sorts by release date, newest first; games without dates appear afterward. Search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
 
 Library shows installed games and drive sources, with scan, mount/unmount and copy/move actions when supported by a compatible ShadowMount v1 local API. Storage shows capacity and game sizes measured on request. Library and storage operations have local fixture coverage; console acceptance remains pending.
 

@@ -1,6 +1,6 @@
 # Find and download a game
 
-Orbit 0.5.0 includes 581 games with single-file options from Archive.org and Vikingfile. Each game appears once; open it to choose from its available sources and formats. The selection depends on which sources you enable.
+Orbit includes 581 games with single-file options from Archive.org and Vikingfile. Each game appears once; open it to choose from its available sources and formats. The selection depends on which sources you enable.
 
 ## Browse and choose
 
