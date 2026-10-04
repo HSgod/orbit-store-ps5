@@ -8,13 +8,17 @@ Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Full 
 
 Run orbit_store.elf through a payload manager or ELF loader, then open Orbit Store from the PS5 Media tab. Phone and computer controls are available at http://<ps5-ip>:34177/ on the same local network. Pair devices keeps the code visible on the PS5; Show code on PS5 repeats its notification.
 
-Version 0.4.1 starts with 147 games, each available as a single-file FFPFSC download from Archive.org. Explore recent releases or search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
+Version 0.4.2 starts with 147 games, each available as a single-file FFPFSC download from Archive.org. Explore recent releases or search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
 
-Version 0.4.1 adds Library for installed games and drive sources, with scan, mount/unmount and copy/move actions when supported by a compatible ShadowMount v1 local API. Storage shows capacity and game sizes measured on request. Library and storage operations have local fixture coverage; console acceptance remains pending.
+Library shows installed games and drive sources, with scan, mount/unmount and copy/move actions when supported by a compatible ShadowMount v1 local API. Storage shows capacity and game sizes measured on request. Library and storage operations have local fixture coverage; console acceptance remains pending.
 
 Payload-manager integration is opt-in. App settings → Payload managers → Add Orbit adds and keeps a copy current in Payload Manager or Homebrew Launcher. Existing copies do not imply consent. Stop syncing preserves files and auto-start settings. Auto-start is separate, and Orbit never changes Payload Manager's global switch. The reported etaHEN toggle interaction remains under investigation.
 
 Catalogue additions and updated links arrive automatically. App settings → Game catalogue → Refresh catalogue checks for additions manually. The last available catalogue remains accessible offline; an internet connection is needed to download games. Queued downloads keep the files originally chosen. App features and fixes still require an Orbit update. To restore a deleted Orbit icon, start Orbit through the payload manager; settings and the download queue stay saved.
+
+Version 0.4.2 adds two connections for large downloads when the host supports ranges and a strong file identity. Other downloads use one connection. It also fixes Browse search navigation: Up returns to the page tab, Down enters results or collection controls, and Left/Right keep text editing.
+
+Orbit 0.4.2 checks for updates on opening and displays a dismissible notice when a newer version is available. Installation and restart remain manual. After upgrading, use 0.4.2 or later because older builds cannot read its saved queue format.
 
 App settings includes Update / reinstall. A paired user can check the fixed official release feed, download a checksum-verified ELF, and see running versus saved versions. Stop Orbit to restart preserves the paused queue; the user then starts /data/orbit-store/orbit_store.elf or an opted-in synced copy from their payload manager. Manually imported copies outside sync need replacing by the user. Older installations need one manual ELF replacement and Orbit restart to get these controls.
 

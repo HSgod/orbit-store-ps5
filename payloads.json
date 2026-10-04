@@ -4,11 +4,11 @@
     {
       "name": "Orbit Store (Beta)",
       "filename": "orbit_store.elf",
-      "url": "https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.1/orbit_store.elf",
-      "description": "A modern PS5 download manager with resumable downloads and phone controls. Includes opt-in payload-manager setup and Library with supported ShadowMount game and storage actions.",
-      "version": "v0.4.1",
+      "url": "https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.2/orbit_store.elf",
+      "description": "A modern PS5 download manager with resumable downloads and phone controls. Includes two-connection downloads on supported hosts, update notices and improved Browse controls.",
+      "version": "v0.4.2",
       "category": "Utilities",
-      "checksum": "a5c8963eda8e799530e51431ba483b7a243096c1a58f61f0fd78f844cd3a4925"
+      "checksum": "0b31068fec0319cf79cf7caf16f547d2a9f7daa9b6fb15cdfd53f14ea0756760"
     }
   ]
 }

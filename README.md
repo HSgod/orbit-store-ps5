@@ -10,7 +10,7 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 Find your next download in **Latest releases**, or search the full catalogue. Open a game to check its size, version and available download options before you choose.
 
-Screenshots show a paired local preview, including the upcoming 0.4.2 backgrounds, with sample USB storage and Library data. They illustrate the interface, not a live console session.
+Screenshots show a paired local preview with sample USB storage and Library data. They illustrate the interface, not a live console session.
 
 ![Desktop Discover with Latest releases and All games](assets/0.4.2/desktop-discover.jpg)
 ![Desktop Browse with search and the expanded catalogue](assets/0.4.1/desktop-browse.jpg)
@@ -59,7 +59,7 @@ Check progress, pause a download or queue another game from your phone. Pair it 
 - **New games without reinstalling.** Catalogue additions arrive automatically. Check for more in App settings, or keep browsing your last catalogue while offline.
 - **Your games in Library.** See installed games and drive sources, then manage compatible sources through ShadowMount.
 - **Manager setup by choice.** Choose where Orbit adds its payload. Automatic startup is separate.
-- **Updates in Orbit.** Check for a release, reinstall when needed, and see which version is running or saved for next start.
+- **Updates in Orbit.** Get a notice when a newer release is available, open its update panel or dismiss it, and choose when to install and restart.
 - **A queue you control.** Switch between active, finished, failed and cancelled downloads, move waiting items up or down, and clear history while keeping downloaded files.
 - **Know what fits.** See free space now, what unfinished downloads still need, and how much will remain afterward.
 - **Find it your way.** Filter by source, format or download size. Sort by title, release date, addition date or size, and save favourites shared with your paired devices.
@@ -68,11 +68,11 @@ Check progress, pause a download or queue another game from your phone. Pair it 
 
 ## Beta status
 
-**Orbit Store 0.4.1 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.4.1).
+**Orbit Store 0.4.2 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.4.2).
 
-Version 0.4.1 adds **Library**, so you can see installed games and sources on your drives in one place. With a compatible ShadowMount local API, scan, mount or unmount supported sources, copy or move them between drives, and check your storage. Catalogue and download pages connect to Library so you can see what you already have.
+Version 0.4.2 adds **two connections for supported downloads**, an **update notice when you open Orbit**, and **smoother Browse navigation**. Pause and resume still control one download. Search supports Up to return to the Browse tab and Down to reach results, including a way out when no games match. Download speed depends on the provider, network and drive.
 
-**Payload-manager setup is now opt-in.** Choose **App settings → Payload managers → Add Orbit** to let Orbit add and update a copy. Existing copies stay in place until you choose whether to allow updates. Auto-start is a separate choice, and Orbit leaves your manager's global Autoload switch unchanged.
+**Payload-manager setup is opt-in.** Choose **App settings → Payload managers → Add Orbit** to let Orbit add and update a copy. Existing copies stay in place until you choose whether to allow updates. Auto-start is a separate choice, and Orbit leaves your manager's global Autoload switch unchanged.
 
 Local automated tests and desktop/phone checks cover these features. Library requires ShadowMount's compatible v1 local API; actions depend on the capabilities it exposes. Console acceptance for Library operations, full downloads, online catalogue refresh, reboot/auto-start and broader firmware support remains pending. The reported etaHEN toggle interaction is still under investigation.
 
@@ -82,7 +82,7 @@ New games and updated links arrive through catalogue updates. You only need an O
 
 ## Using the beta
 
-Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.1/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.1/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.4.1) also includes the exact source, dependency sources, and licences.
+Download [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.2/orbit_store.elf) and [its SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.4.2/orbit_store.elf.sha256). With both files in the same folder, run `shasum -a 256 -c orbit_store.elf.sha256` to verify it. The [release page](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.4.2) also includes the exact source, dependency sources, and licences.
 
 To download Orbit through **Payload Manager**, open **Settings → Manage Sources → Add Source** and paste:
 
@@ -107,6 +107,8 @@ Keep the PS5 awake while downloading. Closing the storefront leaves downloads ru
 
 ## Updating or reinstalling Orbit
 
+**After upgrading to 0.4.2, use 0.4.2 or newer.** The saved download queue uses a newer format that older versions cannot read.
+
 **Coming from beta.2 or earlier:** download the new ELF and replace the existing `orbit_store.elf` in Payload Manager. Accept its overwrite/reinstall prompt. Pause downloads, stop only the identifiable Orbit process in Payload Manager’s **Active Processes**, then run the new ELF. If you cannot confidently identify the process, restart the console when convenient, run the jailbreak and launch the new ELF. Keep the Orbit icon and its saved data.
 
 To restore a deleted Orbit icon, start Orbit through your payload manager. Your paired devices, source choices and download queue stay saved.
@@ -125,6 +127,8 @@ Loading an ELF while Orbit is already running saves the replacement for the next
 The panel shows **Running**, **Saved for next start**, and **Latest release** separately. Pairing, source choices and the download queue are preserved. Updates are manual; no release is installed just by opening the panel. If a download or copy fails, Orbit reports the error and leaves the running session open for a retry.
 
 ## Managing your downloads
+
+Large files use two connections when the host supports byte ranges and a strong file identity. Other hosts use one connection. Both connections belong to one queue item, so Pause, Resume and Cancel apply to the entire download. Speed depends on the host, network and storage.
 
 Open **Downloads** and choose **Active**, **Finished**, **Failed** or **Cancelled**. Finished contains only successfully completed downloads; cancelled items have their own view. Move waiting downloads up or down to choose what runs next. Paused items keep their place. A retry countdown tells you when Orbit will try an interrupted download again.
 
@@ -163,6 +167,8 @@ If your connection drops, you can still browse the last available catalogue. Rec
 |---|---|
 | D-pad / arrow keys | Move focus |
 | Cross / Enter | Select |
+| Search: Up / Down | Return to the Browse tab / move to results; with no matches, Down reaches collection controls |
+| Search: Left / Right | Move the text cursor |
 | Circle / Escape | Back or close details |
 | Touch / mouse | Select visible controls |
 
