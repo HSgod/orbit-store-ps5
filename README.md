@@ -18,7 +18,7 @@ Screenshots show a paired local preview, including the upcoming 0.4.2 background
 
 See installed games and drive sources in **Library**, then choose where Orbit adds its payload under **App settings**.
 
-![Desktop Library with installed, mounted and on-drive status](assets/0.4.1/desktop-library.jpg)
+![Desktop Library with installed, mounted and on-drive status](assets/0.4.2/desktop-library.jpg)
 ![Desktop settings with opt-in payload manager setup](assets/0.4.1/desktop-settings.jpg)
 
 ## Phone
@@ -44,7 +44,7 @@ Check progress, pause a download or queue another game from your phone. Pair it 
     <th width="50%">Payload manager setup</th>
   </tr>
   <tr>
-    <td valign="top" align="center"><img src="assets/0.4.1/phone-library.jpg" width="250" alt="Phone Library with game status and drive filters"></td>
+    <td valign="top" align="center"><img src="assets/0.4.2/phone-library.jpg" width="250" alt="Phone Library with game status and drive filters"></td>
     <td valign="top" align="center"><img src="assets/0.4.1/phone-settings.jpg" width="250" alt="Phone settings with Add Orbit and separate auto-start controls"></td>
   </tr>
 </table>
