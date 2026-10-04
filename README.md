@@ -191,10 +191,6 @@ Orbit does **not** extract RAR/7z archives, directly install packages, launch ga
 - **Missed the pairing code:** select **Pair devices**. The PS5 keeps the code on screen; phones and computers can request the notification again every 30 seconds.
 - **Port already in use:** Orbit reports the port in its startup error. Check which service is using it before retrying.
 
-## Roadmap
-
-Full console download/resume and reboot/auto-start validation, broader firmware testing, and more verified direct-file sources. Archive extraction, game installation, and additional providers are future work, not advertised as finished features.
-
 ## Licence
 
 Orbit Store is free software under the GNU General Public License, version 3 or later. Every release includes the complete source of that build, the sources of its copyleft components, and third-party notices.
