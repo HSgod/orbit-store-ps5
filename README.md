@@ -10,11 +10,11 @@ Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse
 
 Find your next download in **Latest releases**, or search the full catalogue. Open a game to check its size, version and available download options before you choose.
 
-Screenshots show Orbit 0.4.1 in a paired local preview with sample USB storage and Library data. They illustrate the interface, not a live console session.
+Screenshots show a paired local preview, including the upcoming 0.4.2 backgrounds, with sample USB storage and Library data. They illustrate the interface, not a live console session.
 
-![Desktop Discover with Latest releases and All games](assets/0.4.1/desktop-discover.jpg)
+![Desktop Discover with Latest releases and All games](assets/0.4.2/desktop-discover.jpg)
 ![Desktop Browse with search and the expanded catalogue](assets/0.4.1/desktop-browse.jpg)
-![Desktop game details with single-file download options](assets/0.4.1/desktop-details.jpg)
+![Desktop game details with single-file download options](assets/0.4.2/desktop-details.jpg)
 
 See installed games and drive sources in **Library**, then choose where Orbit adds its payload under **App settings**.
 
@@ -32,9 +32,9 @@ Check progress, pause a download or queue another game from your phone. Pair it 
     <th align="center">Download</th>
   </tr>
   <tr>
-    <td valign="top" width="33%"><img src="assets/0.4.1/phone-discover.jpg" width="250" alt="Phone Discover with both game rows"></td>
+    <td valign="top" width="33%"><img src="assets/0.4.2/phone-discover.jpg" width="250" alt="Phone Discover with both game rows"></td>
     <td valign="top" width="33%"><img src="assets/0.4.1/phone-browse.jpg" width="250" alt="Phone Browse and search"></td>
-    <td valign="top" width="33%"><img src="assets/0.4.1/phone-details.jpg" width="250" alt="Phone game details and download options"></td>
+    <td valign="top" width="33%"><img src="assets/0.4.2/phone-details.jpg" width="250" alt="Phone game details and download options"></td>
   </tr>
 </table>
 
