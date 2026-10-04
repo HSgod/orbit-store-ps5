@@ -6,6 +6,16 @@ Start the Orbit payload through your manager, then reopen the Media-tab icon. Th
 
 From another device, use `http://<ps5-ip>:34177/` on the same local network. Keep that port private to your LAN.
 
+## The native TV app will not open or start Orbit
+
+The Games-row app needs **kstuff and ShadowMountPlus**. Check that `PPSA99177.ffpkg` is in `/data/homebrew/` and let ShadowMountPlus register it. Keep only one FFPKG or folder installation.
+
+If the app says Orbit is not running, start your ELF loader on **port 9021** and choose **Try again**, or launch `orbit_store.elf` through your payload manager. The app never stops another running payload to make room.
+
+For missing artwork in the TV app, check the running service version in the browser's **App settings → Update / reinstall**. Use **0.6.0 or later**; older services do not provide its artwork endpoint. Stop Orbit and start the new saved or bundled service. Installing the new FFPKG alone does not replace a service already running.
+
+If a TV app update still opens the previous version, close the app first. Restart the console and jailbreak when convenient so ShadowMountPlus can remount the replacement. The TV app and service have separate versions.
+
 ## An update says Orbit is already running
 
 The replacement was saved for the next start. Open **App settings → Update / reinstall**, compare **Running** and **Saved for next start**, choose **Stop Orbit to restart**, then launch the saved `/data/orbit-store/orbit_store.elf` or a synced manager copy. Pairing and the queue stay saved. A manually imported old ELF starts that older copy unless you replace it.

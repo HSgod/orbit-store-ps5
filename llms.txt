@@ -1,14 +1,14 @@
 # Orbit Store (Beta)
 
-> A modern PS5 download manager with resumable downloads and phone controls. Orbit runs on the console as an ELF payload and serves a controller-friendly interface on the TV and a browser interface on the local network.
+> A modern PS5 download manager with resumable downloads and phone controls. Orbit runs on the console as an ELF service, with a native PS5 TV app and a browser interface on the local network.
 
-The official project is maintained at https://github.com/saawant12/orbit-store-ps5. The public repository contains documentation and the Orbit payload feed. Releases attach the ELF, SHA-256 checksums, exact application source, dependency sources and licence notices.
+The official project is maintained at https://github.com/saawant12/orbit-store-ps5. The public repository contains documentation and the Orbit payload feed. Releases attach orbit_store.elf, the native PPSA99177.ffpkg, SHA-256 checksums and a complete source/licence bundle for both programs and their open-source components.
 
 Orbit requires a PS5 environment capable of loading homebrew ELF payloads. Full console transfers, reboot/auto-start acceptance and other firmware versions remain unverified in this beta. See the current release notes for validation details.
 
 Run orbit_store.elf through a payload manager or ELF loader, then open Orbit Store from the PS5 Media tab. Phone and computer controls are available at http://<ps5-ip>:34177/ on the same local network. Pair devices keeps the code visible on the PS5; Show code on PS5 repeats its notification.
 
-Version 0.5.1 includes UI fixes on Browse and Discover. Orbit offers 581 games, with single-file FFPFSC and exFAT options across Archive.org and Vikingfile. Browse opens first and sorts by release date, newest first; games without dates appear afterward. Search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
+Version 0.6.0 is a big update introducing a native PS5 app. Copy PPSA99177.ffpkg to /data/homebrew/ and open it from the Games row. It requires kstuff and ShadowMountPlus; an ELF loader on port 9021 allows it to start the bundled Orbit service. A running older service needs an intentional restart. The first native app version is 1.0.0, with Orbit service 0.6.0. Orbit offers 581 games, with single-file FFPFSC and exFAT options across Archive.org and Vikingfile. Browse opens first and sorts by release date, newest first; games without dates appear afterward. Search for a title, then check its size, version and download options. New catalogue additions can expand the selection without reinstalling Orbit.
 
 Library shows installed games and drive sources, with scan, mount/unmount and copy/move actions when supported by a compatible ShadowMount v1 local API. Storage shows capacity and game sizes measured on request. Library and storage operations have local fixture coverage; console acceptance remains pending.
 
@@ -18,19 +18,21 @@ Catalogue additions and updated links arrive automatically. App settings → Gam
 
 Orbit supports two connections for large downloads when the host supports ranges and a strong file identity. Other downloads use one connection. It also fixes Browse search navigation: Up returns to the page tab, Down enters results or collection controls, and Left/Right keep text editing.
 
-Orbit checks for updates on opening and displays a dismissible notice when a newer version is available. Installation and restart remain manual. After upgrading, use 0.4.2 or later because older builds cannot read its saved queue format.
+The browser version checks for updates on opening and displays a dismissible notice when a newer version is available. Installation and restart remain manual. After upgrading, use 0.4.2 or later because older builds cannot read its saved queue format.
 
 App settings includes Update / reinstall. A paired user can check the fixed official release feed, download a checksum-verified ELF, and see running versus saved versions. Stop Orbit to restart preserves the paused queue; the user then starts /data/orbit-store/orbit_store.elf or an opted-in synced copy from their payload manager. Manually imported copies outside sync need replacing by the user. Older installations need one manual ELF replacement and Orbit restart to get these controls.
 
-Downloads go directly from third-party providers to the console's selected storage. Orbit supports a persistent reorderable queue, Active/Finished/Failed/Cancelled views, pause, resume, retry countdowns and history cleanup without deleting completed files. Storage estimates include unfinished downloads. Browse has source/format/size filters, release-date/title/size sorting and shared favourites. It does not extract archives, directly install packages, launch games, or download in rest mode. A confirmed ShadowMount scan may register or mount discovered games. Use it only for material you are entitled to obtain and use. Orbit is independent of Sony, PlayStation, game publishers and download providers.
+Downloads go directly from third-party providers to the console's selected storage. Orbit supports a persistent reorderable queue, Active/Finished/Failed/Cancelled views, pause, resume, retry countdowns and history cleanup without deleting completed files. Storage estimates include unfinished downloads. Browse has source/format/size filters, release-date/title/size sorting and shared favourites. It does not extract archives, directly install game packages, launch games, or download in rest mode. A confirmed ShadowMount scan may register or mount discovered games. Use it only for material you are entitled to obtain and use. Orbit is independent of Sony, PlayStation, game publishers and download providers.
 
-Orbit Store is licensed under GPL-3.0-or-later. The complete source corresponding to each released ELF and its dependency licences are included with that release.
+Orbit Store is licensed under GPL-3.0-or-later. The complete source corresponding to each released ELF and native FFPKG, copyleft dependency sources, licence notices and rebuild instructions are included with that release.
 
 Vikingfile file-page options require Orbit 0.5.0 or later. Choose a drive and Open download page on PS5, complete verification if requested, press Download on Vikingfile, then return to Orbit and open Downloads. Orbit validates the exact file before queueing it. The provider browser runs on PS5 even when started from a paired device. Sources remain opt-in.
 
 Diagnostics in App settings lets the user view and copy a local report. Reports omit pairing codes, access tokens, download links, game names and paths; they are not sent automatically.
 
 Versions through 0.4.2 use the Archive-only catalogue.json feed. Version 0.5.0 and later use catalogue-v2.json. Missing dates can be corrected through catalogue updates without reinstalling Orbit.
+
+The native app shares the catalogue, queue, favourites and Library with the browser version. Its App settings and browser-only Vikingfile actions open the browser version; users find the same game there and start the provider step. Browser App settings → TV app installs or updates the native FFPKG; close the TV app before replacement. The ELF service updater is separate. The 0.6 browser interface displays a dismissible native-app announcement linking to the GitHub release.
 
 ## Documentation
 
@@ -45,6 +47,8 @@ Versions through 0.4.2 use the Archive-only catalogue.json feed. Version 0.5.0 a
 
 - [Current release](https://github.com/saawant12/orbit-store-ps5/releases/latest): Version, changelog, validation notes, source archives and licence bundle.
 - [Current ELF](https://github.com/saawant12/orbit-store-ps5/releases/latest/download/orbit_store.elf): The Orbit application payload.
+- [Native TV app](https://github.com/saawant12/orbit-store-ps5/releases/latest/download/PPSA99177.ffpkg): The Games-row app, including the Orbit service.
+- [TV app SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/latest/download/PPSA99177.ffpkg.sha256): Verify the FFPKG before installing.
 - [ELF SHA-256 checksum](https://github.com/saawant12/orbit-store-ps5/releases/latest/download/orbit_store.elf.sha256): Verify the downloaded payload before loading it.
 - [Payload Manager feed](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/payloads.json): Add this URL in Payload Manager under Settings, Manage Sources, Add Source. The feed contains Orbit's ELF URL, version and checksum.
 

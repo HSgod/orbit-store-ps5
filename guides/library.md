@@ -1,5 +1,7 @@
 # Your Library and storage
 
+Library is available in both the native TV app and browser version. Both read the same ShadowMount inventory and share storage operations.
+
 Library shows installed games and sources available on your drives, using the inventory from a compatible **ShadowMount v1 local API** on the same PS5. It works independently of your download-source choices. Orbit does not start ShadowMount or change its configuration.
 
 ![Library with installed, mounted and on-drive status](../assets/0.5.0/desktop-library.jpg)

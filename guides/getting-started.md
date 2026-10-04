@@ -4,19 +4,31 @@ Orbit runs on your PS5. Use the TV with your controller, or pair a phone or comp
 
 You need a PS5 environment that can run homebrew ELF payloads, an ELF loader or payload manager, internet access for provider downloads, and enough writable storage. A phone or computer should be on the same local network. Library management additionally needs a compatible ShadowMount v1 local API.
 
-## Install and open Orbit
+## Install the native TV app
 
-1. Get `orbit_store.elf` and `orbit_store.elf.sha256` from the [latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest). Verify the checksum with `shasum -a 256 -c orbit_store.elf.sha256` from the folder containing both files.
-2. Load the ELF through your payload manager. Orbit saves its runtime and creates its icon in the PS5 Media tab.
-3. Open **Orbit Store**. Browse is the starting page.
-4. Open **Sources**, choose Archive.org, Vikingfile, or both, and read and acknowledge the download notice. Only download material you have permission to obtain and use.
+The native app requires **kstuff and ShadowMountPlus**. For the app to start Orbit's download service itself, keep a compatible **ELF loader on port 9021** running. You can instead start `orbit_store.elf` through your payload manager before opening the app.
+
+1. Get `PPSA99177.ffpkg` and `PPSA99177.ffpkg.sha256` from the [latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest). In the folder containing both files, run `shasum -a 256 -c PPSA99177.ffpkg.sha256`.
+2. If an older Orbit service is running, stop it from **App settings → Update / reinstall → Stop Orbit to restart** in the browser version. Installing an FFPKG does not replace a running service.
+3. Copy the FFPKG to **`/data/homebrew/` on the PS5**. Allow ShadowMountPlus to register it, then open **Orbit Store** from the **Games row**.
+4. Browse is the starting page. On first use, choose **Open browser version** to select your download sources and acknowledge the notice. Return to the TV app afterward. Source choices are shared.
 5. Choose a game, source, format and destination drive. Follow the [download guide](downloads.md) for direct and Vikingfile browser options.
+
+Already using Orbit 0.6.0? In the browser version, open **App settings → TV app → Install on this PS5**. Orbit downloads the official FFPKG, verifies it and saves it to `/data/homebrew/`. The TV app feed becomes available with the release.
+
+## Use the browser version
+
+1. Get `orbit_store.elf` and `orbit_store.elf.sha256` from the [latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest). Run `shasum -a 256 -c orbit_store.elf.sha256` from their folder.
+2. Load the ELF through your payload manager. Orbit saves its runtime and creates its browser shortcut in the PS5 **Media tab**.
+3. Open **Orbit Store**, then **Sources**. Choose Archive.org, Vikingfile, or both, and acknowledge the notice. Only download material you have permission to obtain and use.
+
+Both interfaces use the same service, catalogue, favourites and download queue. The TV app does not need a pairing code on the console. Settings, source selection and phone pairing are in the browser version; the TV app's settings button opens it.
 
 A drive connected to your phone or computer is not a PS5 destination. Attach your external drive to the console; Orbit uses its `homebrew` folder when available.
 
 ![Choose download sources and acknowledge the notice](../assets/0.5.0/desktop-sources.jpg)
 
-*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the release interface with local sample console and storage data.*
+*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the 0.5.0 browser interface with local sample console and storage data.*
 
 ## Optional Payload Manager feed
 
@@ -32,14 +44,16 @@ Open the Orbit Store source, download **Orbit Store (Beta)**, then run `orbit_st
 
 Open **App settings → Payload managers** and choose **Add Orbit**, or **Allow updates to this copy** if it is already listed. This opts that manager into receiving Orbit updates. **Stop syncing** leaves the existing copy and auto-start choices in place.
 
-Auto-start is separate. Choose **Start automatically** if wanted and enable your manager’s global Autoload switch yourself. Orbit does not change that global switch. After a reboot, run your jailbreak and start Orbit manually or through your configured auto-start. The home-screen icon opens Orbit while its payload is running; it cannot start a stopped payload.
+Auto-start is separate. Choose **Start automatically** if wanted and enable your manager’s global Autoload switch yourself. Orbit does not change that global switch. After a reboot, run your jailbreak and start Orbit manually or through your configured auto-start. The Media-tab shortcut needs the payload already running. The Games-row TV app can start it through a local ELF loader on port 9021.
 
-## Update or reinstall
+## Update the download service
+
+These controls are in the browser version. The service version is **0.6.0**; the first native TV app has its own version, **1.0.0**.
 
 1. Open **App settings → Update / reinstall → Check for updates**.
 2. Choose **Install update**, or **Reinstall release** for the current version. Orbit verifies the release checksum and saves the replacement.
 3. Select **Stop Orbit to restart** and confirm. The queue is saved; other payloads are left running.
-4. Run `/data/orbit-store/orbit_store.elf` or a manager copy you opted to keep in sync. Reopen the icon and resume any paused downloads.
+4. Run `/data/orbit-store/orbit_store.elf` or a manager copy you opted to keep in sync. Reopen Orbit and resume any paused downloads. With the ELF loader running, the TV app can also start the newer saved service.
 
 **Running**, **Saved for next start**, and **Latest release** are separate. Uploading a new ELF while Orbit is running saves it for the next start; it does not change the active session. A manually imported copy outside sync must be replaced yourself. Keep the icon and saved data.
 
@@ -48,6 +62,16 @@ Auto-start is separate. Choose **Start automatically** if wanted and enable your
 *App updates install features and fixes. Refresh catalogue updates game data without reinstalling the app.*
 
 Very old beta.2 or earlier installations need a manual ELF replacement and Orbit restart first. Pause downloads and stop only an identifiable Orbit process; if you cannot identify it, restart the console when convenient and load the new ELF after the jailbreak.
+
+## Update the TV app
+
+1. Close the TV app using **PS button → Close Application**.
+2. In the browser version, open **App settings → TV app** and check for an update. Confirm replacement if you previously copied the FFPKG yourself. Orbit verifies the download before replacing it.
+3. Reopen Orbit from the Games row. If ShadowMountPlus still opens the previous app, restart the console when convenient and run your jailbreak again.
+
+You can also verify and replace `/data/homebrew/PPSA99177.ffpkg` manually. Keep only one installation: Orbit will not overwrite a folder installation at `/data/homebrew/PPSA99177/`. Update that folder yourself, or remove your old app copy before switching formats. Keep `/data/orbit-store/`; it holds your settings and queue.
+
+The TV app carries a service copy, but replacing the app does not switch the service already running. Stop Orbit deliberately before starting its new copy. A newer saved service is preserved when opening an older TV app package.
 
 ## Pair your phone or computer
 

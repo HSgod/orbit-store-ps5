@@ -12,6 +12,8 @@ Browse opens first and defaults to **Release date (newest first)**. Games withou
 
 **Discover** offers Latest releases and All games. Save a game from its details page to find it under **Favourites** later; favourites are shared with your paired devices.
 
+In the native TV app, use D-pad/left stick to move, Cross to select, Circle to go back and L1/R1 to switch tabs. Select filters with Cross; choose an option with the D-pad and Cross. The controls below apply to the browser version.
+
 | Input | Action |
 |---|---|
 | D-pad or arrow keys | Move focus |
@@ -33,6 +35,8 @@ On the game page, compare the options under **Download options**. Select the sou
 For a direct option, select **Download to PS5**. Orbit adds it to Downloads after its preflight checks.
 
 ## Vikingfile: open the page on PS5 first
+
+**Starting in the native TV app?** Choose **Open browser version** for a browser-only option. Find the same game again in the browser version, choose its option and drive, then follow the steps below. This does not start the provider step automatically. After Orbit queues the download, you can return to the TV app to follow it.
 
 **Requires Orbit 0.5.0 or later.** Older versions keep their Archive.org catalogue and do not receive unsupported Vikingfile options.
 
@@ -57,7 +61,7 @@ Some previously checked Vikingfile options also offer **Download directly**. Fil
   </tr>
 </table>
 
-*Screenshots use the release UI with local sample storage and paired-console responses. The actual provider page is operated on the PS5.*
+*Screenshots use the 0.5.0 browser UI with local sample storage and paired-console responses. The actual provider page is operated on the PS5.*
 
 ## Follow your queue
 
@@ -67,7 +71,7 @@ Supported large files can use two connections. Speed depends on the provider, ne
 
 **Remove from history** and the history-clear buttons keep completed files. A cancelled item with a kept partial remains recoverable. To remove that partial, reconnect its original drive, select **Partial file options → Delete partial file**, then remove its history entry.
 
-Keep the PS5 awake. Closing the control browser leaves the download worker running; stopping Orbit interrupts it. Interrupted transfers return paused after restart. Orbit does not extract archives, directly install packages, launch games or continue downloading in rest mode. For compatible drive files, see [Library](library.md).
+Keep the PS5 awake. Closing the TV app or control browser leaves the download worker running; stopping Orbit interrupts it. Interrupted transfers return paused after restart. Orbit does not extract archives, directly install game packages, launch games or continue downloading in rest mode. For compatible drive files, see [Library](library.md).
 
 ## Get new games and corrected metadata
 
