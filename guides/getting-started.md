@@ -14,21 +14,21 @@ The native app requires **kstuff and ShadowMountPlus**. For the app to start Orb
 4. Browse is the starting page. On first use, choose **Open browser version** to select your download sources and acknowledge the notice. Return to the TV app afterward. Source choices are shared.
 5. Choose a game, source, format and destination drive. Follow the [download guide](downloads.md) for direct and Vikingfile browser options.
 
-Already using Orbit 0.6.0? In the browser version, open **App settings → TV app → Install on this PS5**. Orbit downloads the official FFPKG, verifies it and saves it to `/data/homebrew/`. The TV app feed becomes available with the release.
+Already using Orbit 0.6.0 or later? In the browser version, open **App settings → TV app → Install on this PS5**. Orbit downloads the official FFPKG, verifies it and saves it to `/data/homebrew/`.
 
 ## Use the browser version
 
 1. Get `orbit_store.elf` and `orbit_store.elf.sha256` from the [latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest). Run `shasum -a 256 -c orbit_store.elf.sha256` from their folder.
 2. Load the ELF through your payload manager. Orbit saves its runtime and creates its browser shortcut in the PS5 **Media tab**.
-3. Open **Orbit Store**, then **Sources**. Choose Archive.org, Vikingfile, or both, and acknowledge the notice. Only download material you have permission to obtain and use.
+3. Open **Orbit Store**, then **App settings → Sources**. Choose Archive.org, Vikingfile, or both, and acknowledge the notice. Only download material you have permission to obtain and use.
 
 Both interfaces use the same service, catalogue, favourites and download queue. The TV app does not need a pairing code on the console. Settings, source selection and phone pairing are in the browser version; the TV app's settings button opens it.
 
 A drive connected to your phone or computer is not a PS5 destination. Attach your external drive to the console; Orbit uses its `homebrew` folder when available.
 
-![Choose download sources and acknowledge the notice](../assets/0.5.0/desktop-sources.jpg)
+![Choose download sources and acknowledge the notice](../assets/0.6.1/desktop-sources.jpg)
 
-*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the 0.5.0 browser interface with local sample console and storage data.*
+*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the 0.6.1 browser interface with local sample console and storage data.*
 
 ## Optional Payload Manager feed
 
@@ -48,7 +48,7 @@ Auto-start is separate. Choose **Start automatically** if wanted and enable your
 
 ## Update the download service
 
-These controls are in the browser version. The service version is **0.6.0**; the first native TV app has its own version, **1.0.0**.
+These controls are in the browser version. The service version is **0.6.1**; the native TV app has its own version, **1.0.1**.
 
 1. Open **App settings → Update / reinstall → Check for updates**.
 2. Choose **Install update**, or **Reinstall release** for the current version. Orbit verifies the release checksum and saves the replacement.
@@ -57,7 +57,7 @@ These controls are in the browser version. The service version is **0.6.0**; the
 
 **Running**, **Saved for next start**, and **Latest release** are separate. Uploading a new ELF while Orbit is running saves it for the next start; it does not change the active session. A manually imported copy outside sync must be replaced yourself. Keep the icon and saved data.
 
-![Update Orbit, refresh its catalogue and open diagnostics](../assets/0.5.0/desktop-settings.jpg)
+![Update Orbit, refresh its catalogue and open diagnostics](../assets/0.6.1/desktop-settings.jpg)
 
 *App updates install features and fixes. Refresh catalogue updates game data without reinstalling the app.*
 

@@ -46,7 +46,7 @@ Artwork comes from external URLs. Orbit tries an available fallback when the pri
 
 Open **App settings → Diagnostics → View diagnostics**, then **Copy diagnostic report**. If automatic copying is unavailable, Orbit shows selectable report text. Reports omit pairing codes, access tokens, download links, game names and paths. Nothing is sent automatically.
 
-![App settings with local diagnostics](../assets/0.5.0/desktop-settings.jpg)
+![App settings with local diagnostics](../assets/0.6.1/desktop-settings.jpg)
 
 *You choose whether to copy and share a report. The screenshot shows the release UI with sample console responses.*
 
