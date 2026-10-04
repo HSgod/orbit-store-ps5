@@ -2,69 +2,73 @@
 
 ### A modern, no-BS download manager for PS5.
 
-Orbit brings a cinematic, controller-friendly storefront to PS5 homebrew. Browse on the TV, or manage the same console from your phone. Downloads travel directly from third-party hosts to your PS5 and the drive attached to it.
+Orbit runs on your PS5. Browse games, compare their available sources and formats, and download a single file directly to the console or an attached drive. Use your controller on the TV, or pair a phone or computer to manage the same queue over your local network.
 
-[Download the latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest) · [Payload Manager feed](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/payloads.json) · [llms.txt](https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/llms.txt)
+Start with **581 games** from Archive.org and Vikingfile. New games and corrected links arrive through catalogue updates, without reinstalling Orbit. You choose which sources to enable and which storage to use.
 
-## Desktop
-
-Open straight into **Browse**, or explore **Discover** and its Latest releases row. Open a game to check its size, version and available download options before you choose.
-
-Screenshots show a paired local preview with sample USB storage and Library data. They illustrate the interface, not a live console session.
-
-![Desktop Discover with Latest releases and All games](assets/0.4.2/desktop-discover.jpg)
-![Desktop Browse with search and the expanded catalogue](assets/0.4.1/desktop-browse.jpg)
-![Desktop game details with single-file download options](assets/0.4.2/desktop-details.jpg)
-
-See installed games and drive sources in **Library**, then choose where Orbit adds its payload under **App settings**.
-
-![Desktop Library with installed, mounted and on-drive status](assets/0.4.2/desktop-library.jpg)
-![Desktop settings with opt-in payload manager setup](assets/0.4.1/desktop-settings.jpg)
-
-## Phone
-
-Check progress, pause a download or queue another game from your phone. Pair it with your PS5 on the same network to control the same queue from either screen.
-
-<table>
-  <tr>
-    <th align="center">Discover</th>
-    <th align="center">Browse</th>
-    <th align="center">Download</th>
-  </tr>
-  <tr>
-    <td valign="top" width="33%"><img src="assets/0.4.2/phone-discover.jpg" width="250" alt="Phone Discover with both game rows"></td>
-    <td valign="top" width="33%"><img src="assets/0.4.1/phone-browse.jpg" width="250" alt="Phone Browse and search"></td>
-    <td valign="top" width="33%"><img src="assets/0.4.2/phone-details.jpg" width="250" alt="Phone game details and download options"></td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th width="50%">Library</th>
-    <th width="50%">Payload manager setup</th>
-  </tr>
-  <tr>
-    <td valign="top" align="center"><img src="assets/0.4.2/phone-library.jpg" width="250" alt="Phone Library with game status and drive filters"></td>
-    <td valign="top" align="center"><img src="assets/0.4.1/phone-settings.jpg" width="250" alt="Phone settings with Add Orbit and separate auto-start controls"></td>
-  </tr>
-</table>
+[Download Orbit](https://github.com/saawant12/orbit-store-ps5/releases/latest) · [Get started](guides/getting-started.md) · [Download guide](guides/downloads.md) · [Library guide](guides/library.md) · [Troubleshooting](guides/troubleshooting.md)
 
 ## Built around the console
 
-- **Direct to PS5.** Files travel directly from the download provider to your console's selected storage.
-- **One file per game.** Start with 581 games to browse, each available as a single download. No archive parts to collect.
-- **A focused collection.** One card per game. Open it to choose from its available sources and formats, with download size and version shown for each option.
-- **Sources you select.** Choose Archive.org, Vikingfile, or both, and acknowledge the download-rights and risk notice before continuing.
-- **Storage you choose.** Prefer an attached external drive's `homebrew` folder, or select internal storage.
-- **New games without reinstalling.** Catalogue additions arrive automatically. Check for more in App settings, or keep browsing your last catalogue while offline.
-- **Your games in Library.** See installed games and drive sources, then manage compatible sources through ShadowMount.
-- **Manager setup by choice.** Choose where Orbit adds its payload. Automatic startup is separate.
-- **Updates in Orbit.** Get a notice when a newer release is available, open its update panel or dismiss it, and choose when to install and restart.
-- **A queue you control.** Switch between active, finished, failed and cancelled downloads, move waiting items up or down, and clear history while keeping downloaded files.
-- **Know what fits.** See free space now, what unfinished downloads still need, and how much will remain afterward.
-- **Find it your way.** Filter by source, format or download size. Start with newest releases first, or sort by title or download size, and save favourites shared with your paired devices.
-- **One interface, everywhere.** Controller on the TV; touch or keyboard on your local network.
-- **No account. No telemetry.** Pair your local device with the code shown on your console.
+- **One file per game.** Choose a single-file FFPFSC or exFAT option, with its source, size and version shown before downloading. No archive parts to collect.
+- **Your queue, your pace.** Pause, resume, retry and reorder downloads. Check the space they need before adding more.
+- **A Library for your drives.** See installed games and available files. Manage compatible sources through ShadowMount.
+- **Control from your phone.** Pair once to browse, queue downloads and check progress on the same PS5.
+- **Updates when you choose.** Orbit tells you when an app update is available. Installation, restart and payload-manager setup remain your choice.
+- **No account. No telemetry.** Your paired devices connect to Orbit on your local network.
+
+## Get started
+
+You need a PS5 that can run homebrew ELF payloads, a payload manager or ELF loader, internet access for downloads, and enough writable storage.
+
+1. Download and verify `orbit_store.elf` from the [latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest), then run it through your loader.
+2. Open **Orbit Store** from the PS5 Media tab and choose your download sources.
+3. Open a game, select its source and format, and choose a drive. Direct options use **Download to PS5**. Vikingfile browser options guide you through **Open download page on PS5 → Download on Vikingfile → return to Orbit**.
+4. Follow the transfer in **Downloads**. Optionally pair your phone to control the same queue.
+
+The icon opens Orbit while its payload is running. After a reboot, start your jailbreak and Orbit again, or use auto-start you have configured. See the [setup and update guide](guides/getting-started.md) for checksums, Payload Manager, pairing and updating an existing installation.
+
+## See how it works
+
+These screenshots show the **0.5.0 interface** with the current catalogue and external artwork. Storage, pairing and Library entries use local sample console data.
+
+### Browse, discover and choose a download
+
+**Find your next game.** Browse opens first, with search, source and format filters, and the newest known releases first. Games without a recorded release date follow afterward.
+
+![Browse 581 games with search, filters and release-date sorting](assets/0.5.0/desktop-browse.jpg)
+
+**Explore the collection.** Discover brings together Latest releases and All games. Select a title to see its artwork and open its details.
+
+![Discover with game artwork, Latest releases and All games](assets/0.5.0/desktop-discover.jpg)
+
+**Choose how to download.** A game’s page shows its available sources and formats together. Vikingfile options explain when to open the provider page, press Download there, and return to Orbit. See the [download guide](guides/downloads.md) for the complete flow.
+
+![Game details with Archive.org and Vikingfile options and the PS5 browser instructions](assets/0.5.0/desktop-viking.jpg)
+
+### The same queue on your phone
+
+Pair a phone on the same network to find a game and choose its download option. Files still go to the PS5’s selected drive. Vikingfile’s provider page and any verification open on the **PS5**, even when you start from your phone.
+
+<table>
+  <tr>
+    <th width="33%">1. Find a game</th>
+    <th width="33%">2. Compare options</th>
+    <th width="33%">3. Start the provider step</th>
+  </tr>
+  <tr>
+    <td valign="top"><img src="assets/0.5.0/phone-browse.jpg" width="250" alt="Phone Browse with search and game cards"></td>
+    <td valign="top"><img src="assets/0.5.0/phone-details.jpg" width="250" alt="Phone game details with Archive.org and Vikingfile choices"></td>
+    <td valign="top"><img src="assets/0.5.0/phone-viking.jpg" width="250" alt="Phone Vikingfile instructions and Open download page on PS5 button"></td>
+  </tr>
+  <tr>
+    <td valign="top">Search the catalogue and filter the available games.</td>
+    <td valign="top">Check the format, size and destination before downloading.</td>
+    <td valign="top">Open Vikingfile on PS5, press Download there, then return to Orbit.</td>
+  </tr>
+</table>
+
+For your existing collection, the [Library guide](guides/library.md) explains installed, mounted and on-drive status, plus the actions available through ShadowMount.
 
 ## Beta status
 

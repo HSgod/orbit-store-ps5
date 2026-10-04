@@ -1,0 +1,45 @@
+# When something needs attention
+
+## Orbit or its icon does not open
+
+Start the Orbit payload through your manager, then reopen the Media-tab icon. The icon opens a running Orbit server and cannot start a stopped payload. If the icon was deleted, starting Orbit recreates its owned shortcut. Avoid deleting Orbit’s saved data when updating.
+
+From another device, use `http://<ps5-ip>:34177/` on the same local network. Keep that port private to your LAN.
+
+## An update says Orbit is already running
+
+The replacement was saved for the next start. Open **App settings → Update / reinstall**, compare **Running** and **Saved for next start**, choose **Stop Orbit to restart**, then launch the saved `/data/orbit-store/orbit_store.elf` or a synced manager copy. Pairing and the queue stay saved. A manually imported old ELF starts that older copy unless you replace it.
+
+## Vikingfile does not enter Downloads
+
+Use Orbit 0.5.0 or later and enable Vikingfile in Sources. Select the desired option and drive, press **Open download page on PS5**, complete any provider verification and press Download on the provider page, then return to Orbit. Verification happens on the PS5 even if you initiated it on your phone.
+
+If the session times out, the provider page changes or the browser restarts, return to Orbit and try that option again. Cancel an existing session before starting another. A file that does not match the selected option is not queued. Provider links may become unavailable.
+
+## A download fails or is slow
+
+- **Provider returned a page:** update Orbit, restart it and retry from Downloads. For browser-only Vikingfile options, repeat the provider step. Orbit still rejects an actual error or verification page returned instead of file data.
+- **Provider throttling:** let the retry delay finish. Orbit honours the provider’s Retry-After response.
+- **Drive disconnected:** reconnect the original destination. Orbit does not silently switch to a different drive.
+- **Not enough space:** free space on the chosen destination, considering unfinished downloads, then retry.
+- **Source changed:** keep the partial until you decide whether to remove it and restart. Orbit will not append a different file to it.
+
+Two connections can help only when supported by the host and file identity. Provider speed limits, network conditions and drive performance still apply.
+
+## A game or image is missing
+
+Check the enabled Sources and clear Browse’s filters. Then try **App settings → Game catalogue → Refresh catalogue**. Older Orbit versions retain their Archive-only catalogue; update to 0.5.0 for Vikingfile options.
+
+Artwork comes from external URLs. Orbit tries an available fallback when the primary fails. Network/DNS restrictions or unavailable host images can still prevent artwork from loading. Some dates and other metadata remain missing; corrections arrive through catalogue updates. Undated games appear after dated games in release-date sorting.
+
+## Share a diagnostic report
+
+Open **App settings → Diagnostics → View diagnostics**, then **Copy diagnostic report**. If automatic copying is unavailable, Orbit shows selectable report text. Reports omit pairing codes, access tokens, download links, game names and paths. Nothing is sent automatically.
+
+![App settings with local diagnostics](../assets/0.5.0/desktop-settings.jpg)
+
+*You choose whether to copy and share a report. The screenshot shows the release UI with sample console responses.*
+
+When reporting a problem in [Issues](https://github.com/saawant12/orbit-store-ps5/issues), include the Orbit version, PS5 firmware, loader, the steps taken and the displayed error. Remove any private details before posting. The reported etaHEN payload-toggle interaction remains under investigation.
+
+[Getting started](getting-started.md) · [Download guide](downloads.md) · [Library guide](library.md) · [Project home](../README.md)
