@@ -11,7 +11,7 @@ The native app requires **kstuff and ShadowMountPlus**. For the app to start Orb
 1. Get `PPSA99177.ffpkg` and `PPSA99177.ffpkg.sha256` from the [latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest). In the folder containing both files, run `shasum -a 256 -c PPSA99177.ffpkg.sha256`.
 2. If an older Orbit service is running, stop it from **App settings → Update / reinstall → Stop Orbit to restart** in the browser version. Installing an FFPKG does not replace a running service.
 3. Copy the FFPKG to **`/data/homebrew/` on the PS5**. Allow ShadowMountPlus to register it, then open **Orbit Store** from the **Games row**.
-4. Browse is the starting page. On first use, choose **Open browser version** to select your download sources and acknowledge the notice. Return to the TV app afterward. Source choices are shared.
+4. Browse is the starting page. On first use, select **Choose sources**, enable the sources you want and acknowledge the notice. Saving opens Browse. Source choices are shared with the browser.
 5. Choose a game, source, format and destination drive. Follow the [download guide](downloads.md) for direct and Vikingfile browser options.
 
 Already using Orbit 0.6.0 or later? In the browser version, open **App settings → TV app → Install on this PS5**. Orbit downloads the official FFPKG, verifies it and saves it to `/data/homebrew/`.
@@ -22,13 +22,17 @@ Already using Orbit 0.6.0 or later? In the browser version, open **App settings 
 2. Load the ELF through your payload manager. Orbit saves its runtime and creates its browser shortcut in the PS5 **Media tab**.
 3. Open **Orbit Store**, then **App settings → Sources**. Choose Archive.org, Vikingfile, or both, and acknowledge the notice. Only download material you have permission to obtain and use.
 
-Both interfaces use the same service, catalogue, favourites and download queue. The TV app does not need a pairing code on the console. Settings, source selection and phone pairing are in the browser version; the TV app's settings button opens it.
+Both interfaces use the same service, catalogue, favourites and download queue. The TV app does not need a pairing code on the console. The native **App settings** page includes Download sources, Storage, Pair a device, Game catalogue and Updates. **More settings → Open browser version** provides auto-start, payload-manager setup and diagnostics.
 
 A drive connected to your phone or computer is not a PS5 destination. Attach your external drive to the console; Orbit uses its `homebrew` folder when available.
 
-![Choose download sources and acknowledge the notice](../assets/0.6.1/desktop-sources.jpg)
+![Choose download sources and acknowledge the notice](../assets/0.6.5/desktop-sources.jpg)
 
-*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the 0.6.1 browser interface with local sample console and storage data.*
+*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the 0.6.5 browser interface with local sample console and storage data.*
+
+## Choose a default drive
+
+Open **App settings → Storage** in the native app. Select an available drive, or **Choose automatically** to prefer external storage when available. Selecting another drive for a download makes that drive the default. An unavailable drive must be chosen again explicitly; Orbit does not silently redirect an active transfer.
 
 ## Optional Payload Manager feed
 
@@ -48,7 +52,9 @@ Auto-start is separate. Choose **Start automatically** if wanted and enable your
 
 ## Update the download service
 
-These controls are in the browser version. The service version is **0.6.1**; the native TV app has its own version, **1.0.1**.
+In the native app, open **App settings → Updates → Download service**. Check for updates, install the chosen release, then confirm **Restart download service**. The app stops only Orbit and starts its saved service through your ELF loader. If no loader is available, follow the on-screen instructions to start Orbit manually.
+
+The following steps apply to the browser version. The service version is **0.6.5**; the native TV app has its own version, **1.1.0**.
 
 1. Open **App settings → Update / reinstall → Check for updates**.
 2. Choose **Install update**, or **Reinstall release** for the current version. Orbit verifies the release checksum and saves the replacement.
@@ -57,13 +63,17 @@ These controls are in the browser version. The service version is **0.6.1**; the
 
 **Running**, **Saved for next start**, and **Latest release** are separate. Uploading a new ELF while Orbit is running saves it for the next start; it does not change the active session. A manually imported copy outside sync must be replaced yourself. Keep the icon and saved data.
 
-![Update Orbit, refresh its catalogue and open diagnostics](../assets/0.6.1/desktop-settings.jpg)
+![Update Orbit, refresh its catalogue and open diagnostics](../assets/0.6.5/desktop-settings.jpg)
 
 *App updates install features and fixes. Refresh catalogue updates game data without reinstalling the app.*
 
 Very old beta.2 or earlier installations need a manual ELF replacement and Orbit restart first. Pause downloads and stop only an identifiable Orbit process; if you cannot identify it, restart the console when convenient and load the new ELF after the jailbreak.
 
 ## Update the TV app
+
+In the native app, open **App settings → Updates → TV app**, check for updates and choose **Update TV app**. Confirm **Replace with this release** if the existing image was copied manually. After installation, close and reopen the app.
+
+Alternatively, use the browser:
 
 1. Close the TV app using **PS button → Close Application**.
 2. In the browser version, open **App settings → TV app** and check for an update. Confirm replacement if you previously copied the FFPKG yourself. Orbit verifies the download before replacing it.
@@ -75,7 +85,7 @@ The TV app carries a service copy, but replacing the app does not switch the ser
 
 ## Pair your phone or computer
 
-While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network. Choose **Pair devices** and enter the six-digit code shown on the PS5. On the console, **Pair devices** keeps the code visible; **Show code on PS5** repeats its notification. Do not share the code publicly.
+In the TV app, open **App settings → Pair a device** to see the console address and six-digit code. While Orbit is running, visit `http://<ps5-ip>:34177/` on the same network. Choose **Pair devices** and enter the six-digit code shown on the PS5. On the console, **Pair devices** keeps the code visible; **Show code on PS5** repeats its notification. Do not share the code publicly.
 
 Your paired device controls the console’s queue. For Vikingfile browser verification, use the PS5 screen to complete the provider steps even when you start from your phone.
 

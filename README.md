@@ -15,7 +15,7 @@ Start with **581 games** from Archive.org and Vikingfile. New games and correcte
 - **Your queue, your pace.** Pause, resume, retry and reorder downloads. Check the space they need before adding more.
 - **A Library for your drives.** See installed games and available files. Manage compatible sources through ShadowMount.
 - **Control from your phone.** Pair once to browse, queue downloads and check progress on the same PS5.
-- **Updates when you choose.** The browser version tells you when an Orbit update is available. Installation, restart and payload-manager setup remain your choice.
+- **Updates when you choose.** Orbit tells you when an update is available. In the TV app, open **App settings → Updates** to manage the TV app and download service separately. Installation, restart and payload-manager setup remain your choice.
 - **No account. No telemetry.** Your paired devices connect to Orbit on your local network.
 
 ## Get started
@@ -23,8 +23,8 @@ Start with **581 games** from Archive.org and Vikingfile. New games and correcte
 You need a PS5 that can run homebrew ELF payloads, a payload manager or ELF loader, internet access for downloads, and enough writable storage.
 
 1. **Choose how to open Orbit.** For the native TV app, download and verify `PPSA99177.ffpkg` from the [latest release](https://github.com/saawant12/orbit-store-ps5/releases/latest), copy it to `/data/homebrew/`, then open Orbit from the Games row. This needs **kstuff and ShadowMountPlus**. For the browser version, run `orbit_store.elf` through your loader and open Orbit from the Media tab.
-2. **Choose your sources.** Open the browser version from the TV app's setup screen, choose Archive.org, Vikingfile, or both, and acknowledge the download notice. Your choices apply across both versions.
-3. **Pick a download.** Open a game, select its source and format, and choose a drive. Direct options download from the TV app. Vikingfile browser options open the browser version; find the same game there and follow **Open download page on PS5 → Download on Vikingfile → return to Orbit**.
+2. **Choose your sources.** Choose sources in the TV app’s setup screen or **App settings → Download sources**. Select Archive.org, Vikingfile, or both, and acknowledge the download notice. Your choices apply across both versions.
+3. **Pick a download.** Open a game, select its source and format, and choose a drive. Direct options download from the TV app. Vikingfile browser options open the browser version; your selected game, source and drive carry over. Follow **Open download page on PS5 → Download on Vikingfile → return to Orbit**.
 4. **Follow your queue.** Open Downloads on the TV or a paired device to check progress, pause or resume.
 
 The TV app includes Orbit's download service and can start it through a compatible ELF loader on **port 9021**. You can also start `orbit_store.elf` yourself. The Media-tab shortcut opens the browser version while the service is running. After a reboot, start your jailbreak before opening Orbit. See the [setup and update guide](guides/getting-started.md) for installation, updates and phone pairing.
@@ -33,21 +33,27 @@ The TV app includes Orbit's download service and can start it through a compatib
 
 Open Orbit from your Games row and use the controller to browse, explore and choose a download. The native app shares your catalogue, favourites and download queue with the browser version.
 
-*Native app previews rendered locally from the 0.6.1 app code with the current catalogue and sample drive data.*
+*Native app previews rendered locally from the 0.6.5 app code with the current catalogue and sample drive data.*
 
 ### Browse, discover and choose a download
 
 **Find your next game.** Search by name or title ID, narrow the collection by source, format or size, and browse the newest known releases first.
 
-![Native TV app Browse with 581 games, search and download filters](assets/0.6.1/native-browse.png)
+![Native TV app Browse with 581 games, search and download filters](assets/0.6.5/native-browse.png)
 
 **Explore on the big screen.** Discover brings game artwork, Latest releases and All games together. Use your controller to move through the collection and open a title.
 
-![Native TV app Discover with featured artwork and game collections](assets/0.6.1/native-discover.png)
+![Native TV app Discover with featured artwork and game collections](assets/0.6.5/native-discover.png)
 
 **Check the details before downloading.** Read about a game, save it to favourites and compare its available download options. Direct options download from the TV app; Vikingfile browser options open the browser version. See the [download guide](guides/downloads.md) for the complete flow.
 
-![Native TV app game details with artwork, description and download options](assets/0.6.1/native-details.png)
+![Native TV app game details with artwork, description and download options](assets/0.6.5/native-details.png)
+
+### Settings without leaving the TV app
+
+Choose sources, set your default drive, pair a phone and refresh your game catalogue from one place. Updates has separate controls for the TV app and its download service; you choose when to install or restart.
+
+![Native App settings with source choices](assets/0.6.5/native-settings.png)
 
 ### The same queue on your phone
 
@@ -58,9 +64,9 @@ Pair a phone on the same network to find a game and choose its download option. 
 3. **Start the provider step.** Open Vikingfile on PS5, press Download there, then return to Orbit.
 
 <p>
-  <a href="assets/0.6.1/phone-browse.jpg"><img src="assets/0.6.1/phone-browse.jpg" width="250" align="top" alt="Step 1: Phone Browse with search and game cards"></a>
-  <a href="assets/0.6.1/phone-details.jpg"><img src="assets/0.6.1/phone-details.jpg" width="250" align="top" alt="Step 2: Phone game details with Archive.org and Vikingfile choices"></a>
-  <a href="assets/0.6.1/phone-viking.jpg"><img src="assets/0.6.1/phone-viking.jpg" width="250" align="top" alt="Step 3: Phone Vikingfile instructions and Open download page on PS5 button"></a>
+  <a href="assets/0.6.5/phone-browse.jpg"><img src="assets/0.6.5/phone-browse.jpg" width="250" align="top" alt="Step 1: Phone Browse with search and game cards"></a>
+  <a href="assets/0.6.5/phone-details.jpg"><img src="assets/0.6.5/phone-details.jpg" width="250" align="top" alt="Step 2: Phone game details with Archive.org and Vikingfile choices"></a>
+  <a href="assets/0.6.5/phone-viking.jpg"><img src="assets/0.6.5/phone-viking.jpg" width="250" align="top" alt="Step 3: Phone Vikingfile instructions and Open download page on PS5 button"></a>
 </p>
 
 *Select a screenshot to open it at full size.*
@@ -69,9 +75,9 @@ For your existing collection, the [Library guide](guides/library.md) explains in
 
 ## Beta status
 
-**Orbit Store 0.6.1 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.6.1).
+**Orbit Store 0.6.5 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.6.5).
 
-**A refreshed experience on your TV, phone and computer.** Browse a refined game grid, explore artwork in Discover and see your collection in the redesigned Library. Game details brings source choices, storage and download controls together. Your existing information, settings and actions remain available.
+**More control from your TV.** Choose sources, set a default drive, pair a device and refresh the catalogue in the native app. Update the TV app and download service separately. Vikingfile options carry your game, source and destination into the browser. Discover and game details do less background work, and completed storage operations use a compact summary.
 
 **Payload-manager setup is opt-in.** Choose **App settings → Payload managers → Add Orbit** to let Orbit add and update a copy. Existing copies stay in place until you choose whether to allow updates. Auto-start is a separate choice, and Orbit leaves your manager's global Autoload switch unchanged.
 
@@ -83,10 +89,10 @@ New games and updated links arrive through catalogue updates. You only need an O
 
 ## Using the beta
 
-The [0.6.1 release](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.6.1) includes:
+The [0.6.5 release](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.6.5) includes:
 
-- [PPSA99177.ffpkg](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.1/PPSA99177.ffpkg), the native TV app, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.1/PPSA99177.ffpkg.sha256).
-- [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.1/orbit_store.elf), the download service and browser interface, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.1/orbit_store.elf.sha256).
+- [PPSA99177.ffpkg](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/PPSA99177.ffpkg), the native TV app, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/PPSA99177.ffpkg.sha256).
+- [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/orbit_store.elf), the download service and browser interface, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/orbit_store.elf.sha256).
 - The complete source and licence bundle for both apps and their open-source components, with build instructions.
 
 Put each download beside its `.sha256` file and run `shasum -a 256 -c <filename>.sha256`. To install the TV app from Orbit 0.6.0 or later, use **App settings → TV app** in the browser version. See the [installation guide](guides/getting-started.md) for both options.
@@ -114,7 +120,7 @@ Keep the PS5 awake while downloading. Closing the storefront leaves downloads ru
 
 ## Updating or reinstalling Orbit
 
-**Update the service and TV app separately.** In the browser version, **App settings → Update / reinstall** updates the ELF; **App settings → TV app** installs or updates the native app. Close the TV app before replacing it. If ShadowMountPlus still opens the old version, restart the console when convenient and run your jailbreak again. Replacing the FFPKG does not switch an already-running Orbit service; stop Orbit deliberately before starting its new copy. The [update guide](guides/getting-started.md#update-the-tv-app) explains both steps.
+**Update the service and TV app separately.** In the native app, open **App settings → Updates** for both. In the browser version, **App settings → Update / reinstall** updates the ELF; **App settings → TV app** installs or updates the native app. Close the TV app before replacing it. If ShadowMountPlus still opens the old version, restart the console when convenient and run your jailbreak again. Replacing the FFPKG does not switch an already-running Orbit service; stop Orbit deliberately before starting its new copy. The [update guide](guides/getting-started.md#update-the-tv-app) explains both steps.
 
 **After upgrading to 0.4.2, use 0.4.2 or newer.** The saved download queue uses a newer format that older versions cannot read.
 

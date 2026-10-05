@@ -6,7 +6,7 @@ Orbit includes 581 games with single-file options from Archive.org and Vikingfil
 
 Browse opens first and defaults to **Release date (newest first)**. Games without a recorded date follow alphabetically. Search by game name or title ID, filter by source, format or download size, and change the sort order. **Reset filters** restores the default. Missing dates and other metadata can be added later through catalogue updates.
 
-![Browse with filters and newest-first sorting](../assets/0.6.1/desktop-browse.jpg)
+![Browse with filters and newest-first sorting](../assets/0.6.5/desktop-browse.jpg)
 
 *Use filters to find options that fit your drive and preferred format. Sizes reflect the download option you choose.*
 
@@ -28,7 +28,7 @@ In the native TV app, use D-pad/left stick to move, Cross to select, Circle to g
 
 On the game page, compare the options under **Download options**. Select the source and format you want, then use **Save to** to choose storage attached to the PS5. Check **Free now**, **Unfinished downloads**, and **After queue + this download** before starting.
 
-![One game with Archive.org and Vikingfile choices](../assets/0.6.1/desktop-details.jpg)
+![One game with Archive.org and Vikingfile choices](../assets/0.6.5/desktop-details.jpg)
 
 *Different sources can offer different formats or sizes for the same game. Select the exact option you intend to download.*
 
@@ -36,7 +36,7 @@ For a direct option, select **Download to PS5**. Orbit adds it to Downloads afte
 
 ## Vikingfile: open the page on PS5 first
 
-**Starting in the native TV app?** Choose **Open browser version** for a browser-only option. Find the same game again in the browser version, choose its option and drive, then follow the steps below. This does not start the provider step automatically. After Orbit queues the download, you can return to the TV app to follow it.
+**Starting in the native TV app?** Choose **Open browser version** for a browser-only option. The browser opens your selected game with the same source and destination. Check those choices, then follow the steps below. If the source or drive is no longer available, select an available one explicitly. This does not start the provider step automatically. After Orbit queues the download, you can return to the TV app to follow it.
 
 **Requires Orbit 0.5.0 or later.** Older versions keep their Archive.org catalogue and do not receive unsupported Vikingfile options.
 
@@ -45,7 +45,7 @@ For a direct option, select **Download to PS5**. Orbit adds it to Downloads afte
 3. Complete any verification yourself and select the provider’s **Download** button. Follow the file’s download controls if a redirect opens another Vikingfile page.
 4. Return to Orbit Store and open **Downloads**. Orbit checks that the captured file matches the selected option before adding it to your queue.
 
-![Vikingfile option and the three steps shown in Orbit](../assets/0.6.1/desktop-viking.jpg)
+![Vikingfile option and the three steps shown in Orbit](../assets/0.6.5/desktop-viking.jpg)
 
 *The Open download page on PS5 button starts the provider step. Download on Vikingfile comes next; then return to Orbit.*
 
@@ -56,12 +56,12 @@ Some previously checked Vikingfile options also offer **Download directly**. Fil
 <table>
   <tr><th>Choose an option on your phone</th><th>Start the PS5 browser step</th></tr>
   <tr>
-    <td valign="top" width="50%"><img src="../assets/0.6.1/phone-details.jpg" width="280" alt="Phone game page with source and format options"></td>
-    <td valign="top" width="50%"><img src="../assets/0.6.1/phone-viking.jpg" width="280" alt="Phone Vikingfile instructions and Open download page on PS5 button"></td>
+    <td valign="top" width="50%"><img src="../assets/0.6.5/phone-details.jpg" width="280" alt="Phone game page with source and format options"></td>
+    <td valign="top" width="50%"><img src="../assets/0.6.5/phone-viking.jpg" width="280" alt="Phone Vikingfile instructions and Open download page on PS5 button"></td>
   </tr>
 </table>
 
-*Screenshots use the 0.6.1 browser UI with local sample storage and paired-console responses. The actual provider page is operated on the PS5.*
+*Screenshots use the 0.6.5 browser UI with local sample storage and paired-console responses. The actual provider page is operated on the PS5.*
 
 ## Follow your queue
 
