@@ -33,27 +33,27 @@ The TV app includes Orbit's download service and can start it through a compatib
 
 Open Orbit from your Games row and use the controller to browse, explore and choose a download. The native app shares your catalogue, favourites and download queue with the browser version.
 
-*Native app previews rendered locally from the 0.6.5 app code with the current catalogue and sample drive data.*
+*Native app previews rendered locally with the current catalogue and sample drive data.*
 
 ### Browse, discover and choose a download
 
 **Find your next game.** Search by name or title ID, narrow the collection by source, format or size, and browse the newest known releases first.
 
-![Native TV app Browse with 581 games, search and download filters](assets/0.6.5/native-browse.png)
+![Native TV app Browse with 581 games, search and download filters](assets/0.7.0/native-browse.png)
 
 **Explore on the big screen.** Discover brings game artwork, Latest releases and All games together. Use your controller to move through the collection and open a title.
 
-![Native TV app Discover with featured artwork and game collections](assets/0.6.5/native-discover.png)
+![Native TV app Discover with featured artwork and game collections](assets/0.7.0/native-discover.png)
 
 **Check the details before downloading.** Read about a game, save it to favourites and compare its available download options. Direct options download from the TV app; Vikingfile browser options open the browser version. See the [download guide](guides/downloads.md) for the complete flow.
 
-![Native TV app game details with artwork, description and download options](assets/0.6.5/native-details.png)
+![Native TV app game details with artwork, description and download options](assets/0.7.0/native-details.png)
 
 ### Settings without leaving the TV app
 
 Choose sources, set your default drive, pair a phone and refresh your game catalogue from one place. Updates has separate controls for the TV app and its download service; you choose when to install or restart.
 
-![Native App settings with source choices](assets/0.6.5/native-settings.png)
+![Native App settings with source choices](assets/0.7.0/native-settings.png)
 
 ### The same queue on your phone
 
@@ -64,9 +64,9 @@ Pair a phone on the same network to find a game and choose its download option. 
 3. **Start the provider step.** Open Vikingfile on PS5, press Download there, then return to Orbit.
 
 <p>
-  <a href="assets/0.6.5/phone-browse.jpg"><img src="assets/0.6.5/phone-browse.jpg" width="250" align="top" alt="Step 1: Phone Browse with search and game cards"></a>
-  <a href="assets/0.6.5/phone-details.jpg"><img src="assets/0.6.5/phone-details.jpg" width="250" align="top" alt="Step 2: Phone game details with Archive.org and Vikingfile choices"></a>
-  <a href="assets/0.6.5/phone-viking.jpg"><img src="assets/0.6.5/phone-viking.jpg" width="250" align="top" alt="Step 3: Phone Vikingfile instructions and Open download page on PS5 button"></a>
+  <a href="assets/0.7.0/phone-browse.jpg"><img src="assets/0.7.0/phone-browse.jpg" width="250" align="top" alt="Step 1: Phone Browse with search and game cards"></a>
+  <a href="assets/0.7.0/phone-details.jpg"><img src="assets/0.7.0/phone-details.jpg" width="250" align="top" alt="Step 2: Phone game details with Archive.org and Vikingfile choices"></a>
+  <a href="assets/0.7.0/phone-viking.jpg"><img src="assets/0.7.0/phone-viking.jpg" width="250" align="top" alt="Step 3: Phone Vikingfile instructions and Open download page on PS5 button"></a>
 </p>
 
 *Select a screenshot to open it at full size.*
@@ -75,7 +75,9 @@ For your existing collection, the [Library guide](guides/library.md) explains in
 
 ## Beta status
 
-**Orbit Store 0.6.5 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.6.5).
+**Orbit Store 0.7.0 is an experimental beta.** [Download the beta](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.7.0).
+
+**Massive improvements to download performance.** The reworked engine uses four connections for supported new downloads, buffers incoming data and preserves progress for pause and resume. Download again also works after removing a cancelled partial.
 
 **More control from your TV.** Choose sources, set a default drive, pair a device and refresh the catalogue in the native app. Update the TV app and download service separately. Vikingfile options carry your game, source and destination into the browser. Discover and game details do less background work, and completed storage operations use a compact summary.
 
@@ -89,10 +91,10 @@ New games and updated links arrive through catalogue updates. You only need an O
 
 ## Using the beta
 
-The [0.6.5 release](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.6.5) includes:
+The [0.7.0 release](https://github.com/saawant12/orbit-store-ps5/releases/tag/v0.7.0) includes:
 
-- [PPSA99177.ffpkg](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/PPSA99177.ffpkg), the native TV app, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/PPSA99177.ffpkg.sha256).
-- [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/orbit_store.elf), the download service and browser interface, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.6.5/orbit_store.elf.sha256).
+- [PPSA99177.ffpkg](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.7.0/PPSA99177.ffpkg), the native TV app, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.7.0/PPSA99177.ffpkg.sha256).
+- [orbit_store.elf](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.7.0/orbit_store.elf), the download service and browser interface, and [its checksum](https://github.com/saawant12/orbit-store-ps5/releases/download/v0.7.0/orbit_store.elf.sha256).
 - The complete source and licence bundle for both apps and their open-source components, with build instructions.
 
 Put each download beside its `.sha256` file and run `shasum -a 256 -c <filename>.sha256`. To install the TV app from Orbit 0.6.0 or later, use **App settings → TV app** in the browser version. See the [installation guide](guides/getting-started.md) for both options.
@@ -141,9 +143,11 @@ Loading an ELF while Orbit is already running saves the replacement for the next
 
 The panel shows **Running**, **Saved for next start**, and **Latest release** separately. Pairing, source choices and the download queue are preserved. Updates are manual; no release is installed just by opening the panel. If a download or copy fails, Orbit reports the error and leaves the running session open for a retry.
 
+After upgrading, keep using Orbit 0.7.0 or later. Older releases cannot read the updated download queue.
+
 ## Managing your downloads
 
-Large files use two connections when the host supports byte ranges and a strong file identity. Other hosts use one connection. Both connections belong to one queue item, so Pause, Resume and Cancel apply to the entire download. Speed depends on the host, network and storage.
+New large downloads use four connections when the host supports byte ranges and a strong file identity. Existing partials keep their original layout; other downloads use one connection. Pause, Resume and Cancel apply to the entire download. Speed depends on the host, network and storage.
 
 Open **Downloads** and choose **Active**, **Finished**, **Failed** or **Cancelled**. Finished contains only successfully completed downloads; cancelled items have their own view. Move waiting downloads up or down to choose what runs next. Paused items keep their place. A retry countdown tells you when Orbit will try an interrupted download again.
 

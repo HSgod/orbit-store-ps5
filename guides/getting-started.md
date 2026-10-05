@@ -26,9 +26,9 @@ Both interfaces use the same service, catalogue, favourites and download queue. 
 
 A drive connected to your phone or computer is not a PS5 destination. Attach your external drive to the console; Orbit uses its `homebrew` folder when available.
 
-![Choose download sources and acknowledge the notice](../assets/0.6.5/desktop-sources.jpg)
+![Choose download sources and acknowledge the notice](../assets/0.7.0/desktop-sources.jpg)
 
-*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the 0.6.5 browser interface with local sample console and storage data.*
+*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Screenshots show the browser interface with local sample console and storage data.*
 
 ## Choose a default drive
 
@@ -54,7 +54,7 @@ Auto-start is separate. Choose **Start automatically** if wanted and enable your
 
 In the native app, open **App settings → Updates → Download service**. Check for updates, install the chosen release, then confirm **Restart download service**. The app stops only Orbit and starts its saved service through your ELF loader. If no loader is available, follow the on-screen instructions to start Orbit manually.
 
-The following steps apply to the browser version. The service version is **0.6.5**; the native TV app has its own version, **1.1.0**.
+The following steps apply to the browser version. The service version is **0.7.0**; the native TV app has its own version, **1.1.0**.
 
 1. Open **App settings → Update / reinstall → Check for updates**.
 2. Choose **Install update**, or **Reinstall release** for the current version. Orbit verifies the release checksum and saves the replacement.
@@ -63,7 +63,7 @@ The following steps apply to the browser version. The service version is **0.6.5
 
 **Running**, **Saved for next start**, and **Latest release** are separate. Uploading a new ELF while Orbit is running saves it for the next start; it does not change the active session. A manually imported copy outside sync must be replaced yourself. Keep the icon and saved data.
 
-![Update Orbit, refresh its catalogue and open diagnostics](../assets/0.6.5/desktop-settings.jpg)
+![Update Orbit, refresh its catalogue and open diagnostics](../assets/0.7.0/desktop-settings.jpg)
 
 *App updates install features and fixes. Refresh catalogue updates game data without reinstalling the app.*
 
