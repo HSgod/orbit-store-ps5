@@ -1,6 +1,7 @@
 ---
 name: Feature request
 about: Suggest a feature or improvement for Orbit Store
+title: "[Feature] "
 ---
 
 Please check existing issues first and keep each request focused

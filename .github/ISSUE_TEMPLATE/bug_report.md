@@ -1,6 +1,7 @@
 ---
 name: Bug report
 about: Report a problem with Orbit Store
+title: "[Bug] "
 ---
 
 ## What happened?
