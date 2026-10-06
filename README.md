@@ -6,7 +6,7 @@ Orbit runs on your PS5. Browse games, compare their available sources and format
 
 Start with **581 games** from Archive.org and Vikingfile. New games and corrected links arrive through catalogue updates, without reinstalling Orbit. You choose which sources to enable and which storage to use.
 
-[Download Orbit](https://github.com/saawant12/orbit-store-ps5/releases/latest) · [Get started](guides/getting-started.md) · [Download guide](guides/downloads.md) · [Library guide](guides/library.md) · [Troubleshooting](guides/troubleshooting.md) · [Bug report format](.github/ISSUE_TEMPLATE/bug_report.md) · [Report a bug](https://github.com/saawant12/orbit-store-ps5/issues/new?template=bug_report.md)
+[Download Orbit](https://github.com/saawant12/orbit-store-ps5/releases/latest) · [Get started](guides/getting-started.md) · [Download guide](guides/downloads.md) · [Library guide](guides/library.md) · [Troubleshooting](guides/troubleshooting.md) · [Bug report format](.github/ISSUE_TEMPLATE/bug_report.md) · [Report a bug](https://github.com/saawant12/orbit-store-ps5/issues/new?template=bug_report.md) · [Request a feature](https://github.com/saawant12/orbit-store-ps5/issues/new?template=feature_request.md)
 
 ## Built around the console
 
