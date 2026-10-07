@@ -10,6 +10,8 @@ Start with **581 games** from Archive.org and Vikingfile. New games and correcte
 
 > **Official channels:** Orbit Store has no official social media accounts. This GitHub repository is our official source for releases, updates and support. Any social media account claiming to officially represent Orbit Store is an impersonator.
 
+> **Always free.** Orbit Store is free to use and will always remain free. We don’t accept donations or payments. Anyone asking for money on our behalf is not affiliated with the project.
+
 ## Built around the console
 
 - **A native app for your TV.** Browse, Discover, Library and Downloads, built for your controller. Your downloads keep running when you close the app.
